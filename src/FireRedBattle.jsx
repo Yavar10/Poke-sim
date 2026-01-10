@@ -41,19 +41,19 @@ const MOVES = {
   SURF: { name: "Surf", damage: 30, pp: 5, type: "water" },
   HYDRO_PUMP: { name: "Hydro Pump", damage: 40, pp: 3, type: "water" },
 
-  GROWL: { name: "Growl", damage: 0, pp: 5, effect: "ATTACK_DOWN" },
-  LEER: { name: "Leer", damage: 0, pp: 5, effect: "DEFENSE_DOWN" },
-  GROWTH: { name: "Growth", damage: 0, pp: 5, effect: "ATTACK_UP" },
-  SMOKESCREEN: { name: "Smokescreen", damage: 0, pp: 5, effect: "ACCURACY_DOWN" },
-  WITHDRAW: { name: "Withdraw", damage: 0, pp: 5, effect: "DEFENSE_UP" },
-  WORK_UP: { name: "Work Up", damage: 0, pp: 5, effect: "ATTACK_UP" },
+  GROWL: { name: "Growl", damage: 0, pp: 5, type: "normal", effect: "ATTACK_DOWN" },
+  LEER: { name: "Leer", damage: 0, pp: 5, type: "normal", effect: "DEFENSE_DOWN" },
+  GROWTH: { name: "Growth", damage: 0, pp: 5, type: "normal", effect: "ATTACK_UP" },
+  SMOKESCREEN: { name: "Smokescreen", damage: 0, pp: 5, type: "normal", effect: "ACCURACY_DOWN" },
+  WITHDRAW: { name: "Withdraw", damage: 0, pp: 5, type: "normal", effect: "DEFENSE_UP" },
+  WORK_UP: { name: "Work Up", damage: 0, pp: 5, type: "normal", effect: "ATTACK_UP" },
+  TAIL_WHIP: { name: "Tail Whip", damage: 0, pp: 5, type: "normal", effect: "DEFENSE_DOWN" },
 
 THUNDERSHOCK: { name: "Thunder Shock", damage: 18, pp: 8, type: "electric" },
 THUNDERBOLT: { name: "Thunderbolt", damage: 30, pp: 5, type: "electric" },
 THUNDER: { name: "Thunder", damage: 40, pp: 3, type: "electric" },
 THUNDER_WAVE: { name: "Thunder Wave", damage: 0, pp: 5, type: "electric", effect: "PARALYZE" },
 QUICK_ATTACK: { name: "Quick Attack", damage: 18, pp: 10, type: "normal" },
-TAIL_WHIP: { name: "Tail Whip", damage: 0, pp: 5, effect: "DEFENSE_DOWN" },
 
 };
 
@@ -323,6 +323,15 @@ const POKEMON = {
     drain: false
   }
 };
+const TYPE_BG_DARK = {
+  fire: "#d84315",
+  water: "#1565c0",
+  grass: "#2e7d32",
+  electric: "#f9a825",
+  normal: "#757575"
+};
+
+
 
 
 //TYPE MATCHUPS
@@ -749,13 +758,17 @@ if(newHp==0)
                   player.moves[0].pp+
                   player.moves[0].pp+
                   player.moves[0].pp)>0?
-                <div style={styles.moves}>
+                <div style={{
+    ...styles.moves,
+    padding: 8,
+    borderRadius: 6
+  }}>
                 {player.moves.map((m) => (
-                  <button
+                  <button 
                     key={m.name}
                     disabled={m.pp === 0}
                     onClick={() => attack(m)}
-                    style={styles.button}
+                    style={{...styles.button,backgroundColor: TYPE_BG_DARK[m.type] || "#444"}}
                   >
                     {m.name} ({m.pp})
                   </button>
@@ -926,16 +939,18 @@ const styles = {
     display: "grid",
     gridTemplateColumns: "repeat(2, 1fr)",
     gap: 8,
-    width: "100%"
+    width: "95%",
+    borderRadius: 6
   },
 
   button: {
-    padding: 8,
-    border: "2px solid #000",
-    cursor: "pointer",
-    textAlign: "center",
-    userSelect: "none"
-  },
+  padding: 8,
+  border: "2px solid #000",
+  cursor: "pointer",
+  textAlign: "center",
+  userSelect: "none",
+  background: "#f5f5f5"
+},
 
   /* ===== SELECTION SCREEN ===== */
   selectionWrapper: {
