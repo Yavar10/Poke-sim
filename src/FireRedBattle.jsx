@@ -393,7 +393,8 @@ export default function FireRedBattle() {
     }, 1400);
   };
 
-  
+  let didPlayerFaint=false;
+  let didEnemyFaint=false;
   /* ================= PLAYER ATTACK ================= */
 const strg=()=>{
         const sdmg = Math.floor(player.maxHp/5);
@@ -423,8 +424,23 @@ const strge=()=>{
         setLog(`${enemy.name} has no moves left!`);
         setLog(`${enemy.name} used Struggle`);
 
+ setTimeout(() => {
+      if (newHp === 0) {
+        faintSound.play();
+        setLog(`${player.name} fainted!`);
+        setGameOver(true);
+        didPlayerFaint=true
+        return
+      } else {
+        setLog(`What will ${player.name} do?`);
+        setLocked(false);
+      }
+    }, 1200);
+
+    if(newHp==0)
+      return;
         setTimeout(() => {
-      if (player.drain === true) {
+      if (player.drain === true&&!didPlayerFaint) {
         const heal = Math.floor(player.hp * 0.125);
         setEnemy((e) => ({
           ...e,
@@ -437,7 +453,7 @@ const strge=()=>{
         setLog(`${enemy.name} regained health!`);
       }
 
-      if (enemy.drain === true) {
+      if (enemy.drain === true&&!didEnemyFaint) {
         const heal = Math.floor(enemy.hp * 0.125);
         setPlayer((e) => ({
           ...e,
@@ -451,16 +467,7 @@ const strge=()=>{
       }
     }, 1100);
 
-    setTimeout(() => {
-      if (newHp === 0) {
-        faintSound.play();
-        setLog(`${player.name} fainted!`);
-        setGameOver(true);
-      } else {
-        setLog(`What will ${player.name} do?`);
-        setLocked(false);
-      }
-    }, 1200);
+   
       }
 const attack = (move) => {
 
@@ -549,7 +556,9 @@ const attack = (move) => {
     setTimeout(() => {
       faintSound.play();
       setLog(`${enemy.name} fainted!`);
+      didEnemyFaint=true;
       setGameOver(true);
+      return
     }, 1600);
     return;
   }
@@ -565,7 +574,7 @@ const attack = (move) => {
 };
 
 
-//enemy turnnnnnnnnn
+//enemy turnnnnnnnnn--------------------------------------------------------------
 const enemyTurn = () => {
   setTimeout(() => {
     let choice=0;
@@ -656,9 +665,24 @@ if (move.effect === "DEFENCE_UP") {
 
     setTimeout(() => setPlayerHit(false), 300);
 
+  setTimeout(() => {
+      if (newHp === 0) {
+        faintSound.play();
+        setLog(`${player.name} fainted!`);
+        setGameOver(true);
+        didPlayerFaint=true
+        return
+      } else {
+        setLog(`What will ${player.name} do?`);
+        setLocked(false);
+      }
+    }, 1200);
+
+if(newHp==0)
+  return;
     // Drain resolution text
     setTimeout(() => {
-      if (player.drain === true) {
+      if (player.drain === true&&!didPlayerFaint) {
         const heal = Math.floor(player.hp * 0.125);
         setEnemy((e) => ({
           ...e,
@@ -671,7 +695,7 @@ if (move.effect === "DEFENCE_UP") {
         setLog(`${enemy.name} regained health!`);
       }
 
-      if (enemy.drain === true) {
+      if (enemy.drain === true&&!didEnemyFaint) {
         const heal = Math.floor(enemy.hp * 0.125);
         setPlayer((e) => ({
           ...e,
@@ -684,17 +708,6 @@ if (move.effect === "DEFENCE_UP") {
         setLog(`${player.name} regained health!`);
       }
     }, 1400);
-
-    setTimeout(() => {
-      if (newHp === 0) {
-        faintSound.play();
-        setLog(`${player.name} fainted!`);
-        setGameOver(true);
-      } else {
-        setLog(`What will ${player.name} do?`);
-        setLocked(false);
-      }
-    }, 1200);
   }, 800);
 };
 
