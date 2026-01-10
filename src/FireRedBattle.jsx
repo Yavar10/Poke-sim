@@ -105,7 +105,14 @@ const strge=()=>{
         setLog(`${enemy.name} used Struggle`);
 
  setTimeout(() => {
-      if (newHp === 0) {
+      if (player.hp === 0) {
+        faintSound.play();
+        setLog(`${player.name} fainted!`);
+        setGameOver(true);
+        didPlayerFaint=true
+        return
+      }
+      else if (enemy.hp === 0) {
         faintSound.play();
         setLog(`${player.name} fainted!`);
         setGameOver(true);
@@ -117,8 +124,8 @@ const strge=()=>{
       }
     }, 1200);
 
-    if(newHp==0)
-      return;
+   /*  if(newHp==0)
+      return; */
         setTimeout(() => {
       if (player.drain === true&&!didPlayerFaint) {
         const heal = Math.floor(player.hp * 0.125);
@@ -146,8 +153,6 @@ const strge=()=>{
         setLog(`${player.name} regained health!`);
       }
     }, 1100);
-
-   
       }
 const attack = (move) => {
 
@@ -458,6 +463,11 @@ if(newHp==0)
             )}
           </>
         )}
+      </div>
+      <div style={{display:"flex", justifyItems:"center",alignItems:"center",gap:"10px"}}>
+      <img  height={14} width={14} src={"https://archives.bulbagarden.net/media/upload/thumb/0/0b/Legends_Arceus_Pok%C3%A9_Ball.png/225px-Legends_Arceus_Pok%C3%A9_Ball.png"} alt="" />
+     <h5>made by <a target="_blank" style={{textDecoration:"none"}} href="https://github.com/Yavar10">yavar</a></h5> 
+      <img height={14} width={14} src={"https://archives.bulbagarden.net/media/upload/thumb/0/0b/Legends_Arceus_Pok%C3%A9_Ball.png/225px-Legends_Arceus_Pok%C3%A9_Ball.png"} alt="" />
       </div>
     </div>
   );
