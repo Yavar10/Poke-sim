@@ -45,8 +45,9 @@ const MOVES = {
   LEER: { name: "Leer", damage: 0, pp: 5, effect: "DEFENSE_DOWN" },
   GROWTH: { name: "Growth", damage: 0, pp: 5, effect: "ATTACK_UP" },
   SMOKESCREEN: { name: "Smokescreen", damage: 0, pp: 5, effect: "ACCURACY_DOWN" },
-  WITHDRAW: { name: "Withdraw", damage: 0, pp: 5, effect: "DEFENSE_UP" }
-  ,
+  WITHDRAW: { name: "Withdraw", damage: 0, pp: 5, effect: "DEFENSE_UP" },
+  WORK_UP: { name: "Work Up", damage: 0, pp: 5, effect: "ATTACK_UP" },
+
 THUNDERSHOCK: { name: "Thunder Shock", damage: 18, pp: 8, type: "electric" },
 THUNDERBOLT: { name: "Thunderbolt", damage: 30, pp: 5, type: "electric" },
 THUNDER: { name: "Thunder", damage: 40, pp: 3, type: "electric" },
@@ -118,7 +119,7 @@ const POKEMON = {
       front: "https://img.pokemondb.net/sprites/black-white/anim/normal/charmeleon.gif",
       back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmeleon.gif"
     },
-    moves: ["EMBER","FLAME_BURST","SCRATCH","SMOKESCREEN"],
+    moves: ["EMBER","FLAME_BURST","SCRATCH","WORK_UP"],
     drain: false
   },
   CHARIZARD: {
@@ -130,7 +131,7 @@ const POKEMON = {
       front: "https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif",
       back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charizard.gif"
     },
-    moves: ["FLAMETHROWER","FIRE_BLAST","SLASH","SMOKESCREEN"],
+    moves: ["FLAMETHROWER","FIRE_BLAST","SLASH","WORK_UP"],
     drain: false
   },
 
@@ -257,7 +258,7 @@ const POKEMON = {
       front: "https://img.pokemondb.net/sprites/black-white/anim/normal/cyndaquil.gif",
       back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/cyndaquil.gif"
     },
-    moves: ["SCRATCH","EMBER","SMOKESCREEN","LEER"],
+    moves: ["SCRATCH","EMBER","WORK_UP","LEER"],
     drain: false
   },
   QUILAVA: {
@@ -269,7 +270,7 @@ const POKEMON = {
       front: "https://img.pokemondb.net/sprites/black-white/anim/normal/quilava.gif",
       back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/quilava.gif"
     },
-    moves: ["EMBER","FLAME_BURST","SMOKESCREEN","SLASH"],
+    moves: ["EMBER","FLAME_BURST","WORK_UP","SLASH"],
     drain: false
   },
   TYPHLOSION: {
@@ -281,7 +282,7 @@ const POKEMON = {
       front: "https://img.pokemondb.net/sprites/black-white/anim/normal/typhlosion.gif",
       back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/typhlosion.gif"
     },
-    moves: ["FLAMETHROWER","FIRE_BLAST","SLASH","SMOKESCREEN"],
+    moves: ["FLAMETHROWER","FIRE_BLAST","SLASH","WORK_UP"],
     drain: false
   },
 
