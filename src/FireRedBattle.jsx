@@ -88,6 +88,7 @@ const strg=()=>{
         }));
         setLog(`${player.name} has no moves left!`);
         setLog(`${player.name} used Struggle`);
+        enemyTurn();
       }
 const strge=()=>{
         const dmg = Math.floor(enemy.maxHp/5);

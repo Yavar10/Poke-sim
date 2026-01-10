@@ -385,7 +385,7 @@ export const POKEMON = {
     moves: ["GUST", "WING_ATTACK"],
     drain: false
   },
-
+/* 
   RATTATA: {
     pkdx: 19,
     name: "Rattata",
@@ -2005,7 +2005,7 @@ export const POKEMON = {
     },
     moves: ["FLAMETHROWER", "WING_ATTACK"],
     drain: false
-  },
+  }, */
 
   DRATINI: {
     pkdx: 147,
