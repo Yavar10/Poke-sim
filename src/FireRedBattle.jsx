@@ -193,7 +193,7 @@ const POKEMON = {
       front: "https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif",
       back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pikachu.gif"
     },
-    moves: ["THUNDERSHOCK", "QUICK_ATTACK", "TAIL_WHIP", "THUNDER_WAVE"],
+    moves: ["THUNDERSHOCK", "QUICK_ATTACK", "TAIL_WHIP", "THUNDER"],
     drain: false
   },
 
@@ -483,7 +483,31 @@ const attack = (move) => {
     setLog(`${enemy.name}'s Attack fell!`);
     return enemyTurn();
   }
-
+  if (move.effect === "ATTACK_UP") {
+    setPlayer((e) => ({
+      ...e,
+      attackStage: Math.min(e.attackStage + 1, 2)
+    }));
+    setLog(`${player.name}'s Attack rose!`);
+    return enemyTurn();
+  }
+  if (move.effect === "DEFENCE_DOWN") {
+    setPlayer((e) => ({
+      ...e,
+      attackStage: Math.min(e.attackStage + 1, 2)
+    }));
+    setLog(`${enemy.name}'s Defence fell!`);
+    return enemyTurn();
+  }
+  
+  if (move.effect === "DEFENCE_UP") {
+    setEnemy((e) => ({
+      ...e,
+      attackStage: Math.max(e.attackStage - 1, -2)
+    }));
+    setLog(`${player.name}'s Defence rose!`);
+    return enemyTurn();
+  }
   const mult =
     stageMultiplier[player.attackStage] *
     effectiveness(move.type, enemy.type);
@@ -531,10 +555,7 @@ const attack = (move) => {
 
   // abhi ke liye no speed imp
   setTimeout(() => {
-        (enemy.moves[0].pp+
-        enemy.moves[2].pp+
-        enemy.moves[3].pp+
-        enemy.moves[1].pp)==0
+        (enemy.moves.reduce((sum, move) => sum + move.pp)==0)
         ?
         strge()
         :
@@ -548,9 +569,10 @@ const enemyTurn = () => {
   setTimeout(() => {
     let choice=0;
     let move=enemy.moves[0];
-    do{choice= Math.floor((Math.random() * 100) / 25);
+    const num=enemy.moves.length;
+    do{choice= Math.floor((Math.random() * 100) / (100/num));
         move= enemy.moves[choice];
-        console.log(enemy.moves[choice].pp)}
+        console.log(enemy.moves[choice].name)}
     while(enemy.moves[choice].pp<=0);
 
     setEnemy((e) => ({
@@ -561,14 +583,41 @@ const enemyTurn = () => {
     }));
 
     if (move.effect === "ATTACK_DOWN") {
-      setPlayer((p) => ({
-        ...p,
-        attackStage: Math.max(p.attackStage - 1, -2)
-      }));
-      setLog(`${player.name}'s Attack fell!`);
-      setLocked(false);
-      return;
-    }
+  setPlayer((e) => ({
+    ...e,
+    attackStage: Math.max(e.attackStage - 1, -2)
+  }));
+  setLog(`${player.name}'s Attack fell!`);
+  return enemyTurn();
+}
+
+if (move.effect === "ATTACK_UP") {
+  setEnemy((e) => ({
+    ...e,
+    attackStage: Math.min(e.attackStage + 1, 2)
+  }));
+  setLog(`${enemy.name}'s Attack rose!`);
+  return enemyTurn();
+}
+
+if (move.effect === "DEFENCE_DOWN") {
+  setEnemy((e) => ({
+    ...e,
+    attackStage: Math.min(e.attackStage + 1, 2)
+  }));
+  setLog(`${player.name}'s Defence fell!`);
+  return enemyTurn();
+}
+
+if (move.effect === "DEFENCE_UP") {
+  setPlayer((e) => ({
+    ...e,
+    attackStage: Math.max(e.attackStage - 1, -2)
+  }));
+  setLog(`${enemy.name}'s Defence rose!`);
+  return enemyTurn();
+}
+
 
     const mult =
       stageMultiplier[enemy.attackStage] *
