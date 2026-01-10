@@ -17,23 +17,49 @@ const stageMultiplier = {
   "2": 2
 };
 
-//Moves DB
+//Moves DB----------------------------------------------------------------------------
 const MOVES = {
-TACKLE: { name: "Tackle", damage: 15, pp: 10, type: "normal" },
-STRUGGLE: { name: "Struggle", damage: 15, pp: 10, type: "normal" },
-SCRATCH: { name: "Scratch", damage: 15, pp: 10, type: "normal" },
-VINE_WHIP: { name: "Vine Whip", damage: 18, pp: 8, type: "grass" },
-EMBER: { name: "Ember", damage: 18, pp: 8, type: "fire" },
-WATER_GUN: { name: "Water Gun", damage: 18, pp: 8, type: "water" },
-GROWL: { name: "Growl", damage: 0, pp: 5, effect: "ATTACK_DOWN" },
-LEER: { name: "Leer", damage: 0, pp: 5, effect: "DEFENSE_DOWN" },
-LEECH_SEED: { name: "Leech Seed", damage: 0, pp: 1, type: "grass", effect: "DRAIN" },
+  TACKLE: { name: "Tackle", damage: 15, pp: 10, type: "normal" },
+  STRUGGLE: { name: "Struggle", damage: 15, pp: 10, type: "normal" },
+  SCRATCH: { name: "Scratch", damage: 15, pp: 10, type: "normal" },
+  SLASH: { name: "Slash", damage: 22, pp: 5, type: "normal" },
+  BITE: { name: "Bite", damage: 18, pp: 8, type: "normal" },
+  BODY_SLAM: { name: "Body Slam", damage: 25, pp: 5, type: "normal" },
+
+  VINE_WHIP: { name: "Vine Whip", damage: 18, pp: 8, type: "grass" },
+  RAZOR_LEAF: { name: "Razor Leaf", damage: 22, pp: 6, type: "grass" },
+  SOLAR_BEAM: { name: "Solar Beam", damage: 35, pp: 3, type: "grass" },
+  LEECH_SEED: { name: "Leech Seed", damage: 0, pp: 1, type: "grass", effect: "DRAIN" },
+
+  EMBER: { name: "Ember", damage: 18, pp: 8, type: "fire" },
+  FLAME_BURST: { name: "Flame Burst", damage: 24, pp: 6, type: "fire" },
+  FLAMETHROWER: { name: "Flamethrower", damage: 30, pp: 5, type: "fire" },
+  FIRE_BLAST: { name: "Fire Blast", damage: 40, pp: 3, type: "fire" },
+
+  WATER_GUN: { name: "Water Gun", damage: 18, pp: 8, type: "water" },
+  BUBBLE: { name: "Bubble", damage: 14, pp: 10, type: "water" },
+  SURF: { name: "Surf", damage: 30, pp: 5, type: "water" },
+  HYDRO_PUMP: { name: "Hydro Pump", damage: 40, pp: 3, type: "water" },
+
+  GROWL: { name: "Growl", damage: 0, pp: 5, effect: "ATTACK_DOWN" },
+  LEER: { name: "Leer", damage: 0, pp: 5, effect: "DEFENSE_DOWN" },
+  GROWTH: { name: "Growth", damage: 0, pp: 5, effect: "ATTACK_UP" },
+  SMOKESCREEN: { name: "Smokescreen", damage: 0, pp: 5, effect: "ACCURACY_DOWN" },
+  WITHDRAW: { name: "Withdraw", damage: 0, pp: 5, effect: "DEFENSE_UP" }
+  ,
+THUNDERSHOCK: { name: "Thunder Shock", damage: 18, pp: 8, type: "electric" },
+THUNDERBOLT: { name: "Thunderbolt", damage: 30, pp: 5, type: "electric" },
+THUNDER: { name: "Thunder", damage: 40, pp: 3, type: "electric" },
+THUNDER_WAVE: { name: "Thunder Wave", damage: 0, pp: 5, type: "electric", effect: "PARALYZE" },
+QUICK_ATTACK: { name: "Quick Attack", damage: 18, pp: 10, type: "normal" },
+TAIL_WHIP: { name: "Tail Whip", damage: 0, pp: 5, effect: "DEFENSE_DOWN" },
+
 };
 
-/* =========================================================
-   POKEMON DATABASE
-   ========================================================= */
+
+//------------POKEMONNSSS DBBBBB-------------------------------------------------
 const POKEMON = {
+  // ===== GEN 1 =====
   BULBASAUR: {
     name: "Bulbasaur",
     type: "grass",
@@ -44,20 +70,33 @@ const POKEMON = {
       back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif"
     },
     moves: ["TACKLE","VINE_WHIP","LEER","LEECH_SEED"],
-    drain:false
+    drain: false
   },
-  SQUIRTLE: {
-    name: "Squirtle",
-    type: "water",
-    maxHp: 58,
-    attack: 24,
+  IVYSAUR: {
+    name: "Ivysaur",
+    type: "grass",
+    maxHp: 70,
+    attack: 40,
     sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif"
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/ivysaur.gif"
     },
-    moves: ["TACKLE", "WATER_GUN", "GROWL", "LEER"],
-    drain:false
+    moves: ["VINE_WHIP","RAZOR_LEAF","LEECH_SEED","GROWTH"],
+    drain: false
   },
+  VENUSAUR: {
+    name: "Venusaur",
+    type: "grass",
+    maxHp: 90,
+    attack: 55,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/venusaur.gif"
+    },
+    moves: ["RAZOR_LEAF","SOLAR_BEAM","LEECH_SEED","GROWTH"],
+    drain: false
+  },
+
   CHARMANDER: {
     name: "Charmander",
     type: "fire",
@@ -67,14 +106,225 @@ const POKEMON = {
       front: "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif",
       back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif"
     },
-    moves: ["SCRATCH", "EMBER", "GROWL", "LEER"],
-    drain:false
+    moves: ["SCRATCH","EMBER","GROWL","LEER"],
+    drain: false
+  },
+  CHARMELEON: {
+    name: "Charmeleon",
+    type: "fire",
+    maxHp: 65,
+    attack: 40,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/charmeleon.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmeleon.gif"
+    },
+    moves: ["EMBER","FLAME_BURST","SCRATCH","SMOKESCREEN"],
+    drain: false
+  },
+  CHARIZARD: {
+    name: "Charizard",
+    type: "fire",
+    maxHp: 85,
+    attack: 60,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charizard.gif"
+    },
+    moves: ["FLAMETHROWER","FIRE_BLAST","SLASH","SMOKESCREEN"],
+    drain: false
+  },
+
+  SQUIRTLE: {
+    name: "Squirtle",
+    type: "water",
+    maxHp: 58,
+    attack: 24,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif"
+    },
+    moves: ["TACKLE","WATER_GUN","GROWL","LEER"],
+    drain: false
+  },
+  WARTORTLE: {
+    name: "Wartortle",
+    type: "water",
+    maxHp: 72,
+    attack: 38,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/wartortle.gif"
+    },
+    moves: ["WATER_GUN","BUBBLE","BITE","WITHDRAW"],
+    drain: false
+  },
+  BLASTOISE: {
+    name: "Blastoise",
+    type: "water",
+    maxHp: 92,
+    attack: 55,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/blastoise.gif"
+    },
+    moves: ["HYDRO_PUMP","SURF","BITE","WITHDRAW"],
+    drain: false
+  },
+
+  PICHU: {
+    name: "Pichu",
+    type: "electric",
+    maxHp: 40,
+    attack: 22,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/pichu.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pichu.gif"
+    },
+    moves: ["THUNDERSHOCK", "TAIL_WHIP", "GROWL"],
+    drain: false
+  },
+
+  PIKACHU: {
+    name: "Pikachu",
+    type: "electric",
+    maxHp: 55,
+    attack: 38,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pikachu.gif"
+    },
+    moves: ["THUNDERSHOCK", "QUICK_ATTACK", "TAIL_WHIP", "THUNDER_WAVE"],
+    drain: false
+  },
+
+  RAICHU: {
+    name: "Raichu",
+    type: "electric",
+    maxHp: 85,
+    attack: 60,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/raichu.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/raichu.gif"
+    },
+    moves: ["THUNDERBOLT", "THUNDER", "QUICK_ATTACK", "TAIL_WHIP"],
+    drain: false
+  },
+
+  // ===== GEN 2 =====
+  CHIKORITA: {
+    name: "Chikorita",
+    type: "grass",
+    maxHp: 55,
+    attack: 26,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/chikorita.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/chikorita.gif"
+    },
+    moves: ["TACKLE","RAZOR_LEAF","GROWL","LEECH_SEED"],
+    drain: false
+  },
+  BAYLEEF: {
+    name: "Bayleef",
+    type: "grass",
+    maxHp: 70,
+    attack: 38,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/bayleef.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bayleef.gif"
+    },
+    moves: ["RAZOR_LEAF","BODY_SLAM","GROWTH","LEECH_SEED"],
+    drain: false
+  },
+  MEGANIUM: {
+    name: "Meganium",
+    type: "grass",
+    maxHp: 90,
+    attack: 55,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/meganium.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/meganium.gif"
+    },
+    moves: ["SOLAR_BEAM","BODY_SLAM","GROWTH","LEECH_SEED"],
+    drain: false
+  },
+
+  CYNDAQUIL: {
+    name: "Cyndaquil",
+    type: "fire",
+    maxHp: 50,
+    attack: 30,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/cyndaquil.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/cyndaquil.gif"
+    },
+    moves: ["SCRATCH","EMBER","SMOKESCREEN","LEER"],
+    drain: false
+  },
+  QUILAVA: {
+    name: "Quilava",
+    type: "fire",
+    maxHp: 65,
+    attack: 42,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/quilava.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/quilava.gif"
+    },
+    moves: ["EMBER","FLAME_BURST","SMOKESCREEN","SLASH"],
+    drain: false
+  },
+  TYPHLOSION: {
+    name: "Typhlosion",
+    type: "fire",
+    maxHp: 85,
+    attack: 60,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/typhlosion.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/typhlosion.gif"
+    },
+    moves: ["FLAMETHROWER","FIRE_BLAST","SLASH","SMOKESCREEN"],
+    drain: false
+  },
+
+  TOTODILE: {
+    name: "Totodile",
+    type: "water",
+    maxHp: 55,
+    attack: 32,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/totodile.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/totodile.gif"
+    },
+    moves: ["SCRATCH","WATER_GUN","BITE","LEER"],
+    drain: false
+  },
+  CROCONAW: {
+    name: "Croconaw",
+    type: "water",
+    maxHp: 70,
+    attack: 45,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/croconaw.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/croconaw.gif"
+    },
+    moves: ["WATER_GUN","BITE","SLASH","WITHDRAW"],
+    drain: false
+  },
+  FERALIGATR: {
+    name: "Feraligatr",
+    type: "water",
+    maxHp: 95,
+    attack: 65,
+    sprites: {
+      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/feraligatr.gif",
+      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/feraligatr.gif"
+    },
+    moves: ["HYDRO_PUMP","CRUNCH","SLASH","WITHDRAW"],
+    drain: false
   }
 };
 
-/* =========================================================
-   TYPE EFFECTIVENESS
-   ========================================================= */
+
+//TYPE MATCHUPS
 const effectiveness = (moveType, defenderType) => {
   if (moveType === "fire" && defenderType === "grass") return 2;
   if (moveType === "water" && defenderType === "fire") return 2;
@@ -82,8 +332,15 @@ const effectiveness = (moveType, defenderType) => {
   if (moveType === "water" && defenderType === "grass") return 0.5;
   if (moveType === "grass" && defenderType === "fire") return 0.5;
   if (moveType === "fire" && defenderType === "water") return 0.5;
+
+  
+  if (moveType === "electric" && defenderType === "water") return 2;
+  if (moveType === "electric" && defenderType === "grass") return 0.5;
+  if (moveType === "electric" && defenderType === "electric") return 0.5;
+
   return 1;
 };
+
 
 /* =========================================================
    BUILD BATTLE-READY POKEMON
@@ -396,7 +653,7 @@ const enemyTurn = () => {
 
   return (
     <div style={styles.container}>
-            <h1 className="font-mono text-3xl text-center tracking-widest uppercase">
+            <h1 className="font-mono text-3xl text-center items-center tracking-widest uppercase">
   POKE LINK
 </h1>
 
@@ -465,6 +722,7 @@ const enemyTurn = () => {
 function Selection({ title, onSelect }) {
   return (
     <div style={styles.selectionWrapper}>
+      <img height={48} width={48} src={"https://archives.bulbagarden.net/media/upload/thumb/0/0b/Legends_Arceus_Pok%C3%A9_Ball.png/225px-Legends_Arceus_Pok%C3%A9_Ball.png"} alt="" />
       <h3>{title}</h3>
       <div style={styles.selectionGrid}>
         {Object.keys(POKEMON).map((key) => (
@@ -521,63 +779,180 @@ function HpBar({ hp, maxHp }) {
    STYLES
    ========================================================= */
 const styles = {
+  /* ===== ROOT CONTAINER ===== */
   container: {
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  justifyContent: "center",
-  marginTop: 40,
-  height: "100vh",
-  fontFamily: `"Courier New", Courier, monospace`,
-  letterSpacing: "0.15em"
-},
-screen: {
-    width: 400,
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "flex-start",   // 🔥 critical fix
+    paddingTop: 16,
+    width: "100%",
+    maxWidth: "100%",
+    minHeight: "100vh",
+    overflowX: "hidden",
+    overflowY: "auto",
+    fontFamily: `"Courier New", Courier, monospace`,
+    letterSpacing: "0.12em"
+  },
+
+  /* ===== MAIN GAME SCREEN ===== */
+  screen: {
+    width: "100%",
+    maxWidth: 420,
     border: "4px solid #000",
     padding: 12,
+    boxSizing: "border-box",
     fontFamily: "monospace",
-    transition: "opacity 1s"
+    transition: "opacity 1s",
+    overflowY: "auto"
   },
 
-  row: { display: "flex", justifyContent: "space-between", marginBottom: 20 },
-  sprite: { width: 100, imageRendering: "pixelated" },
-  info: { width: "60%" },
+  /* ===== BATTLE ROW ===== */
+  row: {
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "center",
+    gap: 8,
+    marginBottom: 20,
+    width: "100%"
+  },
 
-  hpOuter: { height: 10, border: "2px solid #000", background: "#ccc" },
-  hpInner: { height: "100%", background: "#4caf50", transition: "width 0.3s" },
+  sprite: {
+    width: "100%",
+    maxWidth: 100,
+    maxHeight: 80,
+    objectFit: "contain",
+    imageRendering: "pixelated",
+    flexShrink: 0
+  },
 
-  textBox: { border: "3px solid #000", padding: 10, minHeight: 50, marginBottom: 10 },
-  moves: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: 8 },
-  button: { padding: 8, border: "2px solid #000", cursor: "pointer" },
+  info: {
+    width: "100%",
+    flex: 1
+  },
 
-  selectionWrapper: { textAlign: "center" },
+  /* ===== HP BAR ===== */
+  hpOuter: {
+    height: 10,
+    border: "2px solid #000",
+    background: "#ccc",
+    width: "100%",
+    boxSizing: "border-box"
+  },
+
+  hpInner: {
+    height: "100%",
+    background: "#4caf50",
+    transition: "width 0.3s"
+  },
+
+  /* ===== TEXT BOX ===== */
+  textBox: {
+    border: "3px solid #000",
+    padding: 10,
+    minHeight: 50,
+    marginBottom: 10,
+    width: "100%",
+    boxSizing: "border-box",
+    wordBreak: "break-word",
+    overflowWrap: "break-word"
+  },
+
+  /* ===== MOVES ===== */
+  moves: {
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gap: 8,
+    width: "100%"
+  },
+
+  button: {
+    padding: 8,
+    border: "2px solid #000",
+    cursor: "pointer",
+    textAlign: "center",
+    userSelect: "none"
+  },
+
+  /* ===== SELECTION SCREEN ===== */
+  selectionWrapper: {
+    textAlign: "center",
+    width: "100%"
+  },
+
+  /* Header ABOVE grid (image + title) */
+  selectionHeader: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    marginBottom: 16,
+    width: "100%",
+    flexShrink: 0
+  },
+
+  headerImage: {
+    width: "100%",
+    maxWidth: 180,
+    height: "auto",
+    imageRendering: "pixelated"
+  },
+
+  headerTitle: {
+    marginTop: 8,
+    marginBottom: 8,
+    fontSize: "clamp(14px, 4vw, 20px)",
+    textAlign: "center"
+  },
+
+  /* Grid adapts to screen width */
   selectionGrid: {
     display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
+    gridTemplateColumns: "repeat(auto-fit, minmax(90px, 1fr))",
     gap: 12,
-    justifyItems: "center"
+    width: "100%",
+    boxSizing: "border-box"
   },
+
+  /* Selection card */
   selectCard: {
-    width: 120,
-    height: 120,
+    width: "100%",
+    aspectRatio: "1 / 1",
     border: "2px solid #000",
     background: "#f5f5f5",
     cursor: "pointer",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    justifyContent: "space-around",
-    padding: 8
+    justifyContent: "space-between",
+    padding: 6,
+    boxSizing: "border-box",
+    overflow: "hidden"
   },
-  selectSprite: {
-    maxHeight: 80,
-    maxWidth: "100%",
-    imageRendering: "pixelated"
-  },
-  selectName: { fontWeight: "bold", fontSize: 14 },
 
-  flicker: { animation: "flicker 0.3s linear 3" }
+  selectSprite: {
+    width: "100%",
+    maxHeight: "60%",
+    objectFit: "contain",
+    imageRendering: "pixelated",
+    flexShrink: 0
+  },
+
+  selectName: {
+    fontWeight: "bold",
+    fontSize: "clamp(10px, 3vw, 14px)",
+    textAlign: "center",
+    lineHeight: 1.1,
+    maxWidth: "100%",
+    wordBreak: "break-word",
+    overflowWrap: "break-word"
+  },
+
+  /* ===== EFFECTS ===== */
+  flicker: {
+    animation: "flicker 0.3s linear 3"
+  }
 };
+
 
 /* =========================================================
    KEYFRAMES
