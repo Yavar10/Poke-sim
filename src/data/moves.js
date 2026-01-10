@@ -117,5 +117,25 @@ export const MOVES = {
   ROCK_SLIDE: { name: "Rock Slide", damage: 35, pp: 5, type: "rock" },
 
   // DRAGON
-  DRAGON_RAGE: { name: "Dragon Rage", damage: 30, pp: 5, type: "dragon" }
+  DRAGON_RAGE: { name: "Dragon Rage", damage: 30, pp: 5, type: "dragon" },
+
+
+  STRING_SHOT: { name: "String Shot", damage: 0, pp: 10, type: "bug", effect: "SPEED_DOWN" },
+HARDEN: { name: "Harden", damage: 0, pp: 5, type: "normal", effect: "DEFENSE_UP" },
+SLEEP_POWDER: { name: "Sleep Powder", damage: 0, pp: 5, type: "grass", effect: "SLEEP" },
+FURY_ATTACK: { name: "Fury Attack", damage: 20, pp: 10, type: "normal" },
+HYPER_FANG: { name: "Hyper Fang", damage: 35, pp: 5, type: "normal" },
+HEADBUTT: { name: "Headbutt", damage: 22, pp: 8, type: "normal" },
+TAKE_DOWN: { name: "Take Down", damage: 30, pp: 5, type: "normal" },
+REST: { name: "Rest", damage: 0, pp: 3, type: "psychic", effect: "HEAL_FULL" },
+FIRE_PUNCH: { name: "Fire Punch", damage: 30, pp: 5, type: "fire" },
+SPLASH: { name: "Splash", damage: 0, pp: 40, type: "normal" },
+TRANSFORM: { name: "Transform", damage: 0, pp: 5, type: "normal", effect: "TRANSFORM" },
+TRI_ATTACK: { name: "Tri Attack", damage: 30, pp: 5, type: "normal" },
+DRILL_PECK: { name: "Drill Peck", damage: 35, pp: 5, type: "flying" },
+FLY: { name: "Fly", damage: 35, pp: 5, type: "flying" },
+OUTRAGE: { name: "Outrage", damage: 45, pp: 3, type: "dragon" },
+RECOVER: { name: "Recover", damage: 0, pp: 5, type: "psychic", effect: "HEAL_HALF" },
+CRUNCH: { name: "Crunch", damage: 30, pp: 5, type: "dark" }
+
 };
