@@ -1,5 +1,4 @@
 import React from 'react'
-import GeometryDashMini from './GeometryDashMini'
 import FireRedBattle from './FireRedBattle'
 
 const App = () => {
