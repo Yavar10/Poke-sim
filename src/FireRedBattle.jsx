@@ -11,6 +11,8 @@ import { styles } from "./styles/styles";
 
 import { attack } from "./battle/attack";
 
+import retry from "./assets/retry.svg"
+
 
 
 /* =========================================================
@@ -117,7 +119,9 @@ export default function FireRedBattle() {
               </div>
             )}
             {gameOver && 
-            <div>retry</div>
+            <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><button style={{...styles.button,display:"flex",gap:"4px",justifyContent:"center",alignItems:"center"}} onClick={()=>{
+              window.location.reload()
+            }} ><div>Retry</div><img height={15} width={15} src={retry} alt="" /></button></div>
             }
           </>
         )}
