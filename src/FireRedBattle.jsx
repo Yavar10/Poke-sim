@@ -103,7 +103,7 @@ export default function FireRedBattle() {
                     onClick={() => attack(player,enemy,setPlayer,setEnemy,setLog,m,setPlayerHit,setEnemyHit,setGameOver,true,setLocked)}
                     style={{...styles.button,backgroundColor: TYPE_BG_DARK[m.type] || "#444"}}
                   >
-                    {m.name} ({m.pp})
+                   <div className="info"> {m.name} (pp:{m.pp}|pow:{m.damage})</div>
                   </button>
                 ))}
               </div>:

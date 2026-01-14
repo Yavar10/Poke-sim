@@ -46,7 +46,7 @@ VENUSAUR: {
     front:"https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif",
     back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/venusaur.gif"
   },
-  moves:["GIGA_DRAIN","SLUDGE_BOMB","RAZOR_LEAF","LEECH_SEED"],
+  moves:["GIGA_DRAIN","SLUDGE_BOMB","TOXIC","LEECH_SEED"],
   drain:false,
   status:"normal"
 },
