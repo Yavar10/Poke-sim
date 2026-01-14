@@ -9,7 +9,6 @@ import Selection from "./components/Selection";
 import BattleRow from "./components/BattleRow";
 import { styles } from "./styles/styles";
 
-import { struggle } from "./battle/struggle";
 import { attack } from "./battle/attack";
 
 
@@ -52,12 +51,6 @@ export default function FireRedBattle() {
       setLocked(false);
     }, 1400);
   };
-
-  let didPlayerFaint=false;
-  let didEnemyFaint=false;
-  
-
-
 
 
 
@@ -123,6 +116,9 @@ export default function FireRedBattle() {
                   </button>
               </div>
             )}
+            {gameOver && 
+            <div>retry</div>
+            }
           </>
         )}
       </div>

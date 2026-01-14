@@ -27,11 +27,11 @@ export function attack(
   pp(setAttacker, move);
 
   // STATS BUFF
-  if (move && (move.effect === "ATTACK_DOWN" || move.effect === "DEFENCE_UP")) {
+  if (move && (move.effect === "ATTACK_DOWN" || move.effect === "DEFENSE_UP")) {
     atkdn(setDefender, attacker, defender, setLog, move.effect);
   } else if (
     move &&
-    (move.effect === "ATTACK_UP" || move.effect === "DEFENCE_DOWN")
+    (move.effect === "ATTACK_UP" || move.effect === "DEFENSE_DOWN")
   ) {
     atkup(setAttacker, attacker, defender, setLog, move.effect);
   }
@@ -90,7 +90,7 @@ export function attack(
         false
         ,setLocked
       );
-    }, 900); // enemy waits before attacking
+    }, 1000); // enemy waits before attacking
   } else {
     // DRAIN DAMAGE AFTER ENEMY TURN
     

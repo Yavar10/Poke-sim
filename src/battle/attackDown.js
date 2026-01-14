@@ -13,7 +13,7 @@ export function atkdn(
 
   // DELAY MESSAGE (so it doesn't clash with attack text)
   setTimeout(() => {
-    effect === "ATTACK_DOWN"
+    (effect === "ATTACK_DOWN")
       ? setLog(`${defender.name}'s Attack fell!`)
       : setLog(`${attacker.name}'s Defence rose!`);
   }, 1000);

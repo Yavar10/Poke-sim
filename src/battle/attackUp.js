@@ -13,7 +13,7 @@ export function atkup(
 
   // DELAY MESSAGE
   setTimeout(() => {
-    effect === "ATTACK_UP"
+    (effect === "ATTACK_UP")
       ? setLog(`${attacker.name}'s Attack rose!`)
       : setLog(`${defender.name}'s Defence fell!`);
   }, 1000);
