@@ -121,7 +121,7 @@ export default function FireRedBattle() {
             {gameOver && 
             <div style={{display:"flex",justifyContent:"center",alignItems:"center"}}><button style={{...styles.button,display:"flex",gap:"4px",justifyContent:"center",alignItems:"center"}} onClick={()=>{
               window.location.reload()
-            }} ><div>Retry</div><img height={15} width={15} src={retry} alt="" /></button></div>
+            }} ><div style={{color:"black"}}>Retry</div><img height={15} width={15} src={retry} alt="" /></button></div>
             }
           </>
         )}
