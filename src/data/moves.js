@@ -136,6 +136,9 @@ DRILL_PECK: { name: "Drill Peck", damage: 35, pp: 5, type: "flying" },
 FLY: { name: "Fly", damage: 35, pp: 5, type: "flying" },
 OUTRAGE: { name: "Outrage", damage: 45, pp: 3, type: "dragon" },
 RECOVER: { name: "Recover", damage: 0, pp: 5, type: "psychic", effect: "HEAL_HALF" },
-CRUNCH: { name: "Crunch", damage: 30, pp: 5, type: "dark" }
+CRUNCH: { name: "Crunch", damage: 30, pp: 5, type: "dark" },
+POISON_JAB: { name: "Poison Jab", damage: 15, pp: 20, type: "poison", effect: "POISON_CHANCE" },
+WRAP: { name: "Wrap", damage: 15, pp: 20, type: "normal", effect: "TRAP" },
+
 
 };
