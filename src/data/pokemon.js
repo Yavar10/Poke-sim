@@ -1,2082 +1,1795 @@
 export const POKEMON = {
-  // ===== GEN 1 =====
-  BULBASAUR: {
-    name: "Bulbasaur",
-    type: "grass",
-    maxHp: 53,
-    attack: 29,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bulbasaur.gif"
-    },
-    moves: ["TACKLE","VINE_WHIP","LEER","LEECH_SEED"],
-    drain: false
-  },
-  IVYSAUR: {
-    name: "Ivysaur",
-    type: "grass",
-    maxHp: 70,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/ivysaur.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/ivysaur.gif"
-    },
-    moves: ["VINE_WHIP","RAZOR_LEAF","LEECH_SEED","GROWTH"],
-    drain: false
-  },
-  VENUSAUR: {
-    name: "Venusaur",
-    type: "grass",
-    maxHp: 90,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/venusaur.gif"
-    },
-    moves: ["RAZOR_LEAF","SOLAR_BEAM","LEECH_SEED","GROWTH"],
-    drain: false
-  },
-
-  CHARMANDER: {
-    name: "Charmander",
-    type: "fire",
-    maxHp: 44,
-    attack: 28,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/charmander.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmander.gif"
-    },
-    moves: ["SCRATCH","EMBER","GROWL","LEER"],
-    drain: false
-  },
-  CHARMELEON: {
-    name: "Charmeleon",
-    type: "fire",
-    maxHp: 65,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/charmeleon.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charmeleon.gif"
-    },
-    moves: ["EMBER","FLAME_BURST","SCRATCH","WORK_UP"],
-    drain: false
-  },
-  CHARIZARD: {
-    name: "Charizard",
-    type: "fire",
-    maxHp: 85,
-    attack: 60,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/charizard.gif"
-    },
-    moves: ["FLAMETHROWER","FIRE_BLAST","SLASH","WORK_UP"],
-    drain: false
-  },
-
-  SQUIRTLE: {
-    name: "Squirtle",
-    type: "water",
-    maxHp: 58,
-    attack: 24,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/squirtle.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/squirtle.gif"
-    },
-    moves: ["TACKLE","WATER_GUN","GROWL","LEER"],
-    drain: false
-  },
-  WARTORTLE: {
-    name: "Wartortle",
-    type: "water",
-    maxHp: 72,
-    attack: 38,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/wartortle.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/wartortle.gif"
-    },
-    moves: ["WATER_GUN","BUBBLE","BITE","WITHDRAW"],
-    drain: false
-  },
-  BLASTOISE: {
-    name: "Blastoise",
-    type: "water",
-    maxHp: 92,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/blastoise.gif"
-    },
-    moves: ["HYDRO_PUMP","SURF","BITE","WITHDRAW"],
-    drain: false
-  },
-
-  PICHU: {
-    name: "Pichu",
-    type: "electric",
-    maxHp: 40,
-    attack: 22,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/pichu.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pichu.gif"
-    },
-    moves: ["THUNDERSHOCK", "TAIL_WHIP", "GROWL"],
-    drain: false
-  },
-
-  PIKACHU: {
-    name: "Pikachu",
-    type: "electric",
-    maxHp: 55,
-    attack: 38,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pikachu.gif"
-    },
-    moves: ["THUNDERSHOCK", "QUICK_ATTACK", "TAIL_WHIP", "THUNDER"],
-    drain: false
-  },
-
-  RAICHU: {
-    name: "Raichu",
-    type: "electric",
-    maxHp: 85,
-    attack: 60,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/raichu.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/raichu.gif"
-    },
-    moves: ["THUNDERBOLT", "THUNDER", "QUICK_ATTACK", "TAIL_WHIP"],
-    drain: false
-  },
-
-  // ===== GEN 2 =====
-  CHIKORITA: {
-    name: "Chikorita",
-    type: "grass",
-    maxHp: 55,
-    attack: 26,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/chikorita.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/chikorita.gif"
-    },
-    moves: ["TACKLE","RAZOR_LEAF","GROWL","LEECH_SEED"],
-    drain: false
-  },
-  BAYLEEF: {
-    name: "Bayleef",
-    type: "grass",
-    maxHp: 70,
-    attack: 38,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/bayleef.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bayleef.gif"
-    },
-    moves: ["RAZOR_LEAF","BODY_SLAM","GROWTH","LEECH_SEED"],
-    drain: false
-  },
-  MEGANIUM: {
-    name: "Meganium",
-    type: "grass",
-    maxHp: 90,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/meganium.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/meganium.gif"
-    },
-    moves: ["SOLAR_BEAM","BODY_SLAM","GROWTH","LEECH_SEED"],
-    drain: false
-  },
-
-  CYNDAQUIL: {
-    name: "Cyndaquil",
-    type: "fire",
-    maxHp: 50,
-    attack: 30,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/cyndaquil.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/cyndaquil.gif"
-    },
-    moves: ["SCRATCH","EMBER","WORK_UP","LEER"],
-    drain: false
-  },
-  QUILAVA: {
-    name: "Quilava",
-    type: "fire",
-    maxHp: 65,
-    attack: 42,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/quilava.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/quilava.gif"
-    },
-    moves: ["EMBER","FLAME_BURST","WORK_UP","SLASH"],
-    drain: false
-  },
-  TYPHLOSION: {
-    name: "Typhlosion",
-    type: "fire",
-    maxHp: 85,
-    attack: 60,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/typhlosion.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/typhlosion.gif"
-    },
-    moves: ["FLAMETHROWER","FIRE_BLAST","SLASH","WORK_UP"],
-    drain: false
-  },
-
-  TOTODILE: {
-    name: "Totodile",
-    type: "water",
-    maxHp: 55,
-    attack: 32,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/totodile.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/totodile.gif"
-    },
-    moves: ["SCRATCH","WATER_GUN","BITE","LEER"],
-    drain: false
-  },
-  CROCONAW: {
-    name: "Croconaw",
-    type: "water",
-    maxHp: 70,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/croconaw.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/croconaw.gif"
-    },
-    moves: ["WATER_GUN","BITE","SLASH","WITHDRAW"],
-    drain: false
-  },
-  FERALIGATR: {
-    name: "Feraligatr",
-    type: "water",
-    maxHp: 95,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/feraligatr.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/feraligatr.gif"
-    },
-    moves: ["HYDRO_PUMP","CRUNCH","SLASH","WITHDRAW"],
-    drain: false
-  },  CATERPIE: {
-    pkdx: 10,
-    name: "Caterpie",
-    type: "bug",
-    maxHp: 45,
-    attack: 15,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/caterpie.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/caterpie.gif"
-    },
-    moves: ["TACKLE", "STRING_SHOT"],
-    drain: false
-  },
-
-  METAPOD: {
-    pkdx: 11,
-    name: "Metapod",
-    type: "bug",
-    maxHp: 50,
-    attack: 10,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/metapod.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/metapod.gif"
-    },
-    moves: ["HARDEN"],
-    drain: false
-  },
-
-  BUTTERFREE: {
-    pkdx: 12,
-    name: "Butterfree",
-    type: "bug",
-    maxHp: 60,
-    attack: 35,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/butterfree.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/butterfree.gif"
-    },
-    moves: ["CONFUSION", "GUST", "SLEEP_POWDER"],
-    drain: false
-  },
-
-  WEEDLE: {
-    pkdx: 13,
-    name: "Weedle",
-    type: "bug",
-    maxHp: 40,
-    attack: 15,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/weedle.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/weedle.gif"
-    },
-    moves: ["POISON_STING", "STRING_SHOT"],
-    drain: false
-  },
-
-  KAKUNA: {
-    pkdx: 14,
-    name: "Kakuna",
-    type: "bug",
-    maxHp: 45,
-    attack: 10,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/kakuna.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/kakuna.gif"
-    },
-    moves: ["HARDEN"],
-    drain: false
-  },
-
-  BEEDRILL: {
-    pkdx: 15,
-    name: "Beedrill",
-    type: "bug",
-    maxHp: 65,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/beedrill.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/beedrill.gif"
-    },
-    moves: ["POISON_JAB", "FURY_ATTACK"],
-    drain: false
-  },
-
-  PIDGEY: {
-    pkdx: 16,
-    name: "Pidgey",
-    type: "flying",
-    maxHp: 45,
-    attack: 20,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/pidgey.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pidgey.gif"
-    },
-    moves: ["TACKLE", "GUST"],
-    drain: false
-  },
-
-  PIDGEOTTO: {
-    pkdx: 17,
-    name: "Pidgeotto",
-    type: "flying",
-    maxHp: 60,
-    attack: 35,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/pidgeotto.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pidgeotto.gif"
-    },
-    moves: ["GUST", "QUICK_ATTACK"],
-    drain: false
-  },
-
-  PIDGEOT: {
-    pkdx: 18,
-    name: "Pidgeot",
-    type: "flying",
-    maxHp: 80,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/pidgeot.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pidgeot.gif"
-    },
-    moves: ["GUST", "WING_ATTACK"],
-    drain: false
-  },
-/* 
-  RATTATA: {
-    pkdx: 19,
-    name: "Rattata",
-    type: "normal",
-    maxHp: 40,
-    attack: 25,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/rattata.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/rattata.gif"
-    },
-    moves: ["TACKLE", "QUICK_ATTACK"],
-    drain: false
-  },
-
-  RATICATE: {
-    pkdx: 20,
-    name: "Raticate",
-    type: "normal",
-    maxHp: 65,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/raticate.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/raticate.gif"
-    },
-    moves: ["HYPER_FANG", "QUICK_ATTACK"],
-    drain: false
-  },
-    SPEAROW: {
-    pkdx: 21,
-    name: "Spearow",
-    type: "flying",
-    maxHp: 40,
-    attack: 30,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/spearow.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/spearow.gif"
-    },
-    moves: ["PECK", "GROWL"],
-    drain: false
-  },
-
-  FEAROW: {
-    pkdx: 22,
-    name: "Fearow",
-    type: "flying",
-    maxHp: 65,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/fearow.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/fearow.gif"
-    },
-    moves: ["PECK", "FURY_ATTACK"],
-    drain: false
-  },
-
-  EKANS: {
-    pkdx: 23,
-    name: "Ekans",
-    type: "poison",
-    maxHp: 45,
-    attack: 35,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/ekans.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/ekans.gif"
-    },
-    moves: ["BITE", "POISON_STING"],
-    drain: false
-  },
-
-  ARBOK: {
-    pkdx: 24,
-    name: "Arbok",
-    type: "poison",
-    maxHp: 70,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/arbok.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/arbok.gif"
-    },
-    moves: ["BITE", "GLARE"],
-    drain: false
-  },
-
-  SANDSHREW: {
-    pkdx: 27,
-    name: "Sandshrew",
-    type: "ground",
-    maxHp: 50,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/sandshrew.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/sandshrew.gif"
-    },
-    moves: ["SCRATCH", "DEFENSE_CURL"],
-    drain: false
-  },
-
-  SANDSLASH: {
-    pkdx: 28,
-    name: "Sandslash",
-    type: "ground",
-    maxHp: 75,
-    attack: 60,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/sandslash.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/sandslash.gif"
-    },
-    moves: ["SLASH", "DEFENSE_CURL"],
-    drain: false
-  },
-
-  CLEFAIRY: {
-    pkdx: 35,
-    name: "Clefairy",
-    type: "fairy",
-    maxHp: 70,
-    attack: 30,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/clefairy.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/clefairy.gif"
-    },
-    moves: ["POUND", "GROWL"],
-    drain: false
-  },
-
-  CLEFABLE: {
-    pkdx: 36,
-    name: "Clefable",
-    type: "fairy",
-    maxHp: 95,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/clefable.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/clefable.gif"
-    },
-    moves: ["BODY_SLAM", "GROWL"],
-    drain: false
-  },
-
-  VULPIX: {
-    pkdx: 37,
-    name: "Vulpix",
-    type: "fire",
-    maxHp: 38,
-    attack: 30,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/vulpix.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/vulpix.gif"
-    },
-    moves: ["EMBER", "TAIL_WHIP"],
-    drain: false
-  },
-
-  NINETALES: {
-    pkdx: 38,
-    name: "Ninetales",
-    type: "fire",
-    maxHp: 73,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/ninetales.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/ninetales.gif"
-    },
-    moves: ["EMBER", "CONFUSE_RAY"],
-    drain: false
-  },
-
-  ZUBAT: {
-    pkdx: 41,
-    name: "Zubat",
-    type: "poison",
-    maxHp: 40,
-    attack: 25,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/zubat.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/zubat.gif"
-    },
-    moves: ["LEECH_LIFE", "BITE"],
-    drain: false
-  },
-
-  GOLBAT: {
-    pkdx: 42,
-    name: "Golbat",
-    type: "poison",
-    maxHp: 75,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/golbat.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/golbat.gif"
-    },
-    moves: ["LEECH_LIFE", "BITE"],
-    drain: false
-  },
-
-  ODDISH: {
-    pkdx: 43,
-    name: "Oddish",
-    type: "grass",
-    maxHp: 45,
-    attack: 25,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/oddish.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/oddish.gif"
-    },
-    moves: ["ABSORB", "GROWTH"],
-    drain: false
-  },
-
-  GLOOM: {
-    pkdx: 44,
-    name: "Gloom",
-    type: "grass",
-    maxHp: 60,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/gloom.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/gloom.gif"
-    },
-    moves: ["ABSORB", "ACID"],
-    drain: false
-  },
-
-  VILEPLUME: {
-    pkdx: 45,
-    name: "Vileplume",
-    type: "grass",
-    maxHp: 75,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/vileplume.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/vileplume.gif"
-    },
-    moves: ["PETAL_DANCE", "SOLAR_BEAM"],
-    drain: false
-  },
-
-  PARAS: {
-    pkdx: 46,
-    name: "Paras",
-    type: "bug",
-    maxHp: 35,
-    attack: 30,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/paras.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/paras.gif"
-    },
-    moves: ["SCRATCH", "ABSORB"],
-    drain: false
-  },
-
-  PARASECT: {
-    pkdx: 47,
-    name: "Parasect",
-    type: "bug",
-    maxHp: 60,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/parasect.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/parasect.gif"
-    },
-    moves: ["SLASH", "ABSORB"],
-    drain: false
-  },
-
-  DIGLETT: {
-    pkdx: 50,
-    name: "Diglett",
-    type: "ground",
-    maxHp: 30,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/diglett.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/diglett.gif"
-    },
-    moves: ["SCRATCH", "MUD_SLAP"],
-    drain: false
-  },
-
-  DUGTRIO: {
-    pkdx: 51,
-    name: "Dugtrio",
-    type: "ground",
-    maxHp: 55,
-    attack: 70,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/dugtrio.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/dugtrio.gif"
-    },
-    moves: ["EARTHQUAKE", "SLASH"],
-    drain: false
-  },
-
-  MEOWTH: {
-    pkdx: 52,
-    name: "Meowth",
-    type: "normal",
-    maxHp: 40,
-    attack: 30,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/meowth.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/meowth.gif"
-    },
-    moves: ["SCRATCH", "BITE"],
-    drain: false
-  },
-
-  PERSIAN: {
-    pkdx: 53,
-    name: "Persian",
-    type: "normal",
-    maxHp: 65,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/persian.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/persian.gif"
-    },
-    moves: ["SLASH", "BITE"],
-    drain: false
-  },
-
-  PSYDUCK: {
-    pkdx: 54,
-    name: "Psyduck",
-    type: "water",
-    maxHp: 50,
-    attack: 35,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/psyduck.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/psyduck.gif"
-    },
-    moves: ["WATER_GUN", "CONFUSION"],
-    drain: false
-  },
-
-  GOLDUCK: {
-    pkdx: 55,
-    name: "Golduck",
-    type: "water",
-    maxHp: 80,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/golduck.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/golduck.gif"
-    },
-    moves: ["SURF", "CONFUSION"],
-    drain: false
-  },
-
-  MANKEY: {
-    pkdx: 56,
-    name: "Mankey",
-    type: "fighting",
-    maxHp: 40,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/mankey.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/mankey.gif"
-    },
-    moves: ["KARATE_CHOP", "LEER"],
-    drain: false
-  },
-
-  PRIMEAPE: {
-    pkdx: 57,
-    name: "Primeape",
-    type: "fighting",
-    maxHp: 65,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/primeape.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/primeape.gif"
-    },
-    moves: ["CROSS_CHOP", "RAGE"],
-    drain: false
-  },
-
-  GROWLITHE: {
-    pkdx: 58,
-    name: "Growlithe",
-    type: "fire",
-    maxHp: 55,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/growlithe.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/growlithe.gif"
-    },
-    moves: ["EMBER", "BITE"],
-    drain: false
-  },
-
-  ARCANINE: {
-    pkdx: 59,
-    name: "Arcanine",
-    type: "fire",
-    maxHp: 90,
-    attack: 70,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/arcanine.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/arcanine.gif"
-    },
-    moves: ["FLAMETHROWER", "EXTREME_SPEED"],
-    drain: false
-  },
-
-  POLIWAG: {
-    pkdx: 60,
-    name: "Poliwag",
-    type: "water",
-    maxHp: 40,
-    attack: 25,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/poliwag.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/poliwag.gif"
-    },
-    moves: ["WATER_GUN", "BUBBLE"],
-    drain: false
-  },
-
-  POLIWHIRL: {
-    pkdx: 61,
-    name: "Poliwhirl",
-    type: "water",
-    maxHp: 65,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/poliwhirl.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/poliwhirl.gif"
-    },
-    moves: ["WATER_GUN", "BODY_SLAM"],
-    drain: false
-  },
-
-  POLIWRATH: {
-    pkdx: 62,
-    name: "Poliwrath",
-    type: "water",
-    maxHp: 90,
-    attack: 60,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/poliwrath.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/poliwrath.gif"
-    },
-    moves: ["SURF", "CROSS_CHOP"],
-    drain: false
-  },
-
-  ABRA: {
-    pkdx: 63,
-    name: "Abra",
-    type: "psychic",
-    maxHp: 25,
-    attack: 15,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/abra.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/abra.gif"
-    },
-    moves: ["CONFUSION"],
-    drain: false
-  },
-
-  KADABRA: {
-    pkdx: 64,
-    name: "Kadabra",
-    type: "psychic",
-    maxHp: 40,
-    attack: 35,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/kadabra.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/kadabra.gif"
-    },
-    moves: ["CONFUSION", "PSYBEAM"],
-    drain: false
-  },
-
-  ALAKAZAM: {
-    pkdx: 65,
-    name: "Alakazam",
-    type: "psychic",
-    maxHp: 55,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/alakazam.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/alakazam.gif"
-    },
-    moves: ["PSYCHIC", "PSYBEAM"],
-    drain: false
-  },
-
-  MACHOP: {
-    pkdx: 66,
-    name: "Machop",
-    type: "fighting",
-    maxHp: 70,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/machop.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/machop.gif"
-    },
-    moves: ["KARATE_CHOP", "LOW_KICK"],
-    drain: false
-  },
-
-  MACHOKE: {
-    pkdx: 67,
-    name: "Machoke",
-    type: "fighting",
-    maxHp: 80,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/machoke.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/machoke.gif"
-    },
-    moves: ["KARATE_CHOP", "SUBMISSION"],
-    drain: false
-  },
-
-  MACHAMP: {
-    pkdx: 68,
-    name: "Machamp",
-    type: "fighting",
-    maxHp: 90,
-    attack: 80,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/machamp.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/machamp.gif"
-    },
-    moves: ["CROSS_CHOP", "SUBMISSION"],
-    drain: false
-  },
-
-  BELLSPROUT: {
-    pkdx: 69,
-    name: "Bellsprout",
-    type: "grass",
-    maxHp: 50,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/bellsprout.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/bellsprout.gif"
-    },
-    moves: ["VINE_WHIP", "ABSORB"],
-    drain: false
-  },
-
-  WEEPINBELL: {
-    pkdx: 70,
-    name: "Weepinbell",
-    type: "grass",
-    maxHp: 65,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/weepinbell.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/weepinbell.gif"
-    },
-    moves: ["VINE_WHIP", "ACID"],
-    drain: false
-  },
-
-  VICTREEBEL: {
-    pkdx: 71,
-    name: "Victreebel",
-    type: "grass",
-    maxHp: 80,
-    attack: 70,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/victreebel.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/victreebel.gif"
-    },
-    moves: ["RAZOR_LEAF", "SLAM"],
-    drain: false
-  },
-
-  TENTACOOL: {
-    pkdx: 72,
-    name: "Tentacool",
-    type: "water",
-    maxHp: 40,
-    attack: 35,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/tentacool.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/tentacool.gif"
-    },
-    moves: ["WATER_GUN", "ACID"],
-    drain: false
-  },
-
-  TENTACRUEL: {
-    pkdx: 73,
-    name: "Tentacruel",
-    type: "water",
-    maxHp: 80,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/tentacruel.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/tentacruel.gif"
-    },
-    moves: ["SURF", "ACID"],
-    drain: false
-  },
-
-  GEODUDE: {
-    pkdx: 74,
-    name: "Geodude",
-    type: "rock",
-    maxHp: 40,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/geodude.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/geodude.gif"
-    },
-    moves: ["ROCK_THROW", "TACKLE"],
-    drain: false
-  },
-
-  GRAVELER: {
-    pkdx: 75,
-    name: "Graveler",
-    type: "rock",
-    maxHp: 55,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/graveler.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/graveler.gif"
-    },
-    moves: ["ROCK_THROW", "EARTHQUAKE"],
-    drain: false
-  },
-    GOLEM: {
-    pkdx: 76,
-    name: "Golem",
-    type: "rock",
-    maxHp: 80,
-    attack: 80,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/golem.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/golem.gif"
-    },
-    moves: ["EARTHQUAKE", "ROCK_SLIDE"],
-    drain: false
-  },
-
-  PONYTA: {
-    pkdx: 77,
-    name: "Ponyta",
-    type: "fire",
-    maxHp: 50,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/ponyta.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/ponyta.gif"
-    },
-    moves: ["EMBER", "STOMP"],
-    drain: false
-  },
-
-  RAPIDASH: {
-    pkdx: 78,
-    name: "Rapidash",
-    type: "fire",
-    maxHp: 65,
-    attack: 60,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/rapidash.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/rapidash.gif"
-    },
-    moves: ["FLAMETHROWER", "STOMP"],
-    drain: false
-  },
-
-  SLOWPOKE: {
-    pkdx: 79,
-    name: "Slowpoke",
-    type: "water",
-    maxHp: 90,
-    attack: 35,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/slowpoke.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/slowpoke.gif"
-    },
-    moves: ["WATER_GUN", "CONFUSION"],
-    drain: false
-  },
-
-  SLOWBRO: {
-    pkdx: 80,
-    name: "Slowbro",
-    type: "water",
-    maxHp: 95,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/slowbro.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/slowbro.gif"
-    },
-    moves: ["SURF", "CONFUSION"],
-    drain: false
-  },
-
-  MAGNEMITE: {
-    pkdx: 81,
-    name: "Magnemite",
-    type: "electric",
-    maxHp: 40,
-    attack: 35,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/magnemite.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/magnemite.gif"
-    },
-    moves: ["THUNDERSHOCK", "TACKLE"],
-    drain: false
-  },
-
-  MAGNETON: {
-    pkdx: 82,
-    name: "Magneton",
-    type: "electric",
-    maxHp: 65,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/magneton.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/magneton.gif"
-    },
-    moves: ["THUNDERBOLT", "SPARK"],
-    drain: false
-  },
-
-  FARFETCHD: {
-    pkdx: 83,
-    name: "Farfetch’d",
-    type: "normal",
-    maxHp: 52,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/farfetchd.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/farfetchd.gif"
-    },
-    moves: ["SLASH", "LEER"],
-    drain: false
-  },
-
-  DODUO: {
-    pkdx: 84,
-    name: "Doduo",
-    type: "flying",
-    maxHp: 45,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/doduo.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/doduo.gif"
-    },
-    moves: ["PECK", "FURY_ATTACK"],
-    drain: false
-  },
-
-  DODRIO: {
-    pkdx: 85,
-    name: "Dodrio",
-    type: "flying",
-    maxHp: 60,
-    attack: 70,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/dodrio.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/dodrio.gif"
-    },
-    moves: ["DRILL_PECK", "TRI_ATTACK"],
-    drain: false
-  },
-
-  SEEL: {
-    pkdx: 86,
-    name: "Seel",
-    type: "water",
-    maxHp: 65,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/seel.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/seel.gif"
-    },
-    moves: ["ICY_WIND", "HEADBUTT"],
-    drain: false
-  },
-
-  DEWGONG: {
-    pkdx: 87,
-    name: "Dewgong",
-    type: "water",
-    maxHp: 90,
-    attack: 60,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/dewgong.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/dewgong.gif"
-    },
-    moves: ["ICE_BEAM", "SURF"],
-    drain: false
-  },
-
-  GRIMER: {
-    pkdx: 88,
-    name: "Grimer",
-    type: "poison",
-    maxHp: 80,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/grimer.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/grimer.gif"
-    },
-    moves: ["SLUDGE", "POUND"],
-    drain: false
-  },
-
-  MUK: {
-    pkdx: 89,
-    name: "Muk",
-    type: "poison",
-    maxHp: 105,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/muk.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/muk.gif"
-    },
-    moves: ["SLUDGE", "MINIMIZE"],
-    drain: false
-  },
-
-  SHELLDER: {
-    pkdx: 90,
-    name: "Shellder",
-    type: "water",
-    maxHp: 30,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/shellder.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/shellder.gif"
-    },
-    moves: ["ICY_WIND", "CLAMP"],
-    drain: false
-  },
-
-  CLOYSTER: {
-    pkdx: 91,
-    name: "Cloyster",
-    type: "water",
-    maxHp: 50,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/cloyster.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/cloyster.gif"
-    },
-    moves: ["ICE_BEAM", "CLAMP"],
-    drain: false
-  },
-
-  GASTLY: {
-    pkdx: 92,
-    name: "Gastly",
-    type: "ghost",
-    maxHp: 30,
-    attack: 35,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/gastly.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/gastly.gif"
-    },
-    moves: ["LICK", "CONFUSE_RAY"],
-    drain: false
-  },
-
-  HAUNTER: {
-    pkdx: 93,
-    name: "Haunter",
-    type: "ghost",
-    maxHp: 45,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/haunter.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/haunter.gif"
-    },
-    moves: ["SHADOW_BALL", "CONFUSE_RAY"],
-    drain: false
-  },
-
-  GENGAR: {
-    pkdx: 94,
-    name: "Gengar",
-    type: "ghost",
-    maxHp: 60,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/gengar.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/gengar.gif"
-    },
-    moves: ["SHADOW_BALL", "DREAM_EATER"],
-    drain: false
-  },
-
-  ONIX: {
-    pkdx: 95,
-    name: "Onix",
-    type: "rock",
-    maxHp: 35,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/onix.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/onix.gif"
-    },
-    moves: ["ROCK_THROW", "BIND"],
-    drain: false
-  },
-
-  DROWZEE: {
-    pkdx: 96,
-    name: "Drowzee",
-    type: "psychic",
-    maxHp: 60,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/drowzee.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/drowzee.gif"
-    },
-    moves: ["CONFUSION", "HYPNOSIS"],
-    drain: false
-  },
-
-  HYPNO: {
-    pkdx: 97,
-    name: "Hypno",
-    type: "psychic",
-    maxHp: 85,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/hypno.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/hypno.gif"
-    },
-    moves: ["PSYCHIC", "HYPNOSIS"],
-    drain: false
-  },
-
-  KRABBY: {
-    pkdx: 98,
-    name: "Krabby",
-    type: "water",
-    maxHp: 30,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/krabby.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/krabby.gif"
-    },
-    moves: ["BUBBLE", "VICE_GRIP"],
-    drain: false
-  },
-
-  KINGLER: {
-    pkdx: 99,
-    name: "Kingler",
-    type: "water",
-    maxHp: 55,
-    attack: 70,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/kingler.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/kingler.gif"
-    },
-    moves: ["CRABHAMMER", "VICE_GRIP"],
-    drain: false
-  },
-
-  VOLTORB: {
-    pkdx: 100,
-    name: "Voltorb",
-    type: "electric",
-    maxHp: 40,
-    attack: 30,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/voltorb.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/voltorb.gif"
-    },
-    moves: ["SPARK", "TACKLE"],
-    drain: false
-  },
-
-  ELECTRODE: {
-    pkdx: 101,
-    name: "Electrode",
-    type: "electric",
-    maxHp: 60,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/electrode.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/electrode.gif"
-    },
-    moves: ["THUNDERBOLT", "SELF_DESTRUCT"],
-    drain: false
-  },
-
-  EXEGGCUTE: {
-    pkdx: 102,
-    name: "Exeggcute",
-    type: "grass",
-    maxHp: 60,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/exeggcute.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/exeggcute.gif"
-    },
-    moves: ["CONFUSION", "ABSORB"],
-    drain: false
-  },
-
-  EXEGGUTOR: {
-    pkdx: 103,
-    name: "Exeggutor",
-    type: "grass",
-    maxHp: 95,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/exeggutor.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/exeggutor.gif"
-    },
-    moves: ["PSYCHIC", "SOLAR_BEAM"],
-    drain: false
-  },
-
-  CUBONE: {
-    pkdx: 104,
-    name: "Cubone",
-    type: "ground",
-    maxHp: 50,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/cubone.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/cubone.gif"
-    },
-    moves: ["BONE_CLUB", "HEADBUTT"],
-    drain: false
-  },
-
-  MAROWAK: {
-    pkdx: 105,
-    name: "Marowak",
-    type: "ground",
-    maxHp: 60,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/marowak.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/marowak.gif"
-    },
-    moves: ["BONE_CLUB", "EARTHQUAKE"],
-    drain: false
-  },
-
-  HITMONLEE: {
-    pkdx: 106,
-    name: "Hitmonlee",
-    type: "fighting",
-    maxHp: 50,
-    attack: 75,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/hitmonlee.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/hitmonlee.gif"
-    },
-    moves: ["HI_JUMP_KICK", "DOUBLE_KICK"],
-    drain: false
-  },
-
-  HITMONCHAN: {
-    pkdx: 107,
-    name: "Hitmonchan",
-    type: "fighting",
-    maxHp: 50,
-    attack: 70,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/hitmonchan.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/hitmonchan.gif"
-    },
-    moves: ["MACH_PUNCH", "ICE_PUNCH"],
-    drain: false
-  },
-
-  LICKITUNG: {
-    pkdx: 108,
-    name: "Lickitung",
-    type: "normal",
-    maxHp: 90,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/lickitung.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/lickitung.gif"
-    },
-    moves: ["LICK", "BODY_SLAM"],
-    drain: false
-  },
-
-  KOFFING: {
-    pkdx: 109,
-    name: "Koffing",
-    type: "poison",
-    maxHp: 40,
-    attack: 35,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/koffing.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/koffing.gif"
-    },
-    moves: ["SMOG", "TACKLE"],
-    drain: false
-  },
-
-  WEEZING: {
-    pkdx: 110,
-    name: "Weezing",
-    type: "poison",
-    maxHp: 65,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/weezing.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/weezing.gif"
-    },
-    moves: ["SLUDGE", "EXPLOSION"],
-    drain: false
-  },
-
-  RHYHORN: {
-    pkdx: 111,
-    name: "Rhyhorn",
-    type: "rock",
-    maxHp: 80,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/rhyhorn.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/rhyhorn.gif"
-    },
-    moves: ["HORN_ATTACK", "STOMP"],
-    drain: false
-  },
-
-  RHYDON: {
-    pkdx: 112,
-    name: "Rhydon",
-    type: "rock",
-    maxHp: 105,
-    attack: 80,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/rhydon.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/rhydon.gif"
-    },
-    moves: ["EARTHQUAKE", "MEGAHORN"],
-    drain: false
-  },
-
-  CHANSEY: {
-    pkdx: 113,
-    name: "Chansey",
-    type: "normal",
-    maxHp: 250,
-    attack: 20,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/chansey.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/chansey.gif"
-    },
-    moves: ["SOFT_BOILED", "POUND"],
-    drain: false
-  },
-
-  TANGELA: {
-    pkdx: 114,
-    name: "Tangela",
-    type: "grass",
-    maxHp: 65,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/tangela.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/tangela.gif"
-    },
-    moves: ["VINE_WHIP", "ABSORB"],
-    drain: false
-  },
-
-  KANGASKHAN: {
-    pkdx: 115,
-    name: "Kangaskhan",
-    type: "normal",
-    maxHp: 105,
-    attack: 70,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/kangaskhan.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/kangaskhan.gif"
-    },
-    moves: ["COMET_PUNCH", "BITE"],
-    drain: false
-  },
-
-  HORSEA: {
-    pkdx: 116,
-    name: "Horsea",
-    type: "water",
-    maxHp: 30,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/horsea.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/horsea.gif"
-    },
-    moves: ["WATER_GUN", "SMOKESCREEN"],
-    drain: false
-  },
-
-  SEADRA: {
-    pkdx: 117,
-    name: "Seadra",
-    type: "water",
-    maxHp: 55,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/seadra.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/seadra.gif"
-    },
-    moves: ["SURF", "SMOKESCREEN"],
-    drain: false
-  },
-
-  GOLDEEN: {
-    pkdx: 118,
-    name: "Goldeen",
-    type: "water",
-    maxHp: 45,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/goldeen.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/goldeen.gif"
-    },
-    moves: ["HORN_ATTACK", "WATER_GUN"],
-    drain: false
-  },
-
-  SEAKING: {
-    pkdx: 119,
-    name: "Seaking",
-    type: "water",
-    maxHp: 80,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/seaking.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/seaking.gif"
-    },
-    moves: ["MEGAHORN", "SURF"],
-    drain: false
-  },
-
-  STARYU: {
-    pkdx: 120,
-    name: "Staryu",
-    type: "water",
-    maxHp: 30,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/staryu.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/staryu.gif"
-    },
-    moves: ["WATER_GUN", "RAPID_SPIN"],
-    drain: false
-  },
-
-  STARMIE: {
-    pkdx: 121,
-    name: "Starmie",
-    type: "water",
-    maxHp: 60,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/starmie.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/starmie.gif"
-    },
-    moves: ["SURF", "PSYCHIC"],
-    drain: false
-  },
-
-  MR_MIME: {
-    pkdx: 122,
-    name: "Mr. Mime",
-    type: "psychic",
-    maxHp: 40,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/mr-mime.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/mr-mime.gif"
-    },
-    moves: ["PSYCHIC", "BARRIER"],
-    drain: false
-  },
-
-  SCYTHER: {
-    pkdx: 123,
-    name: "Scyther",
-    type: "bug",
-    maxHp: 70,
-    attack: 75,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/scyther.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/scyther.gif"
-    },
-    moves: ["SLASH", "FURY_CUTTER"],
-    drain: false
-  },
-
-  JYNX: {
-    pkdx: 124,
-    name: "Jynx",
-    type: "psychic",
-    maxHp: 65,
-    attack: 50,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/jynx.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/jynx.gif"
-    },
-    moves: ["ICE_BEAM", "PSYCHIC"],
-    drain: false
-  },
-
-  ELECTABUZZ: {
-    pkdx: 125,
-    name: "Electabuzz",
-    type: "electric",
-    maxHp: 65,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/electabuzz.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/electabuzz.gif"
-    },
-    moves: ["THUNDERPUNCH", "SPARK"],
-    drain: false
-  },
-  MAGMAR: {
-    pkdx: 126,
-    name: "Magmar",
-    type: "fire",
-    maxHp: 65,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/magmar.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/magmar.gif"
-    },
-    moves: ["EMBER", "FIRE_PUNCH"],
-    drain: false
-  },
-
-  PINSIR: {
-    pkdx: 127,
-    name: "Pinsir",
-    type: "bug",
-    maxHp: 65,
-    attack: 75,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/pinsir.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/pinsir.gif"
-    },
-    moves: ["VICE_GRIP", "SUBMISSION"],
-    drain: false
-  },
-
-  TAUROS: {
-    pkdx: 128,
-    name: "Tauros",
-    type: "normal",
-    maxHp: 75,
-    attack: 70,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/tauros.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/tauros.gif"
-    },
-    moves: ["TAKE_DOWN", "HEADBUTT"],
-    drain: false
-  },
-
-  MAGIKARP: {
-    pkdx: 129,
-    name: "Magikarp",
-    type: "water",
-    maxHp: 20,
-    attack: 10,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/magikarp.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/magikarp.gif"
-    },
-    moves: ["SPLASH"],
-    drain: false
-  },
-
-  GYARADOS: {
-    pkdx: 130,
-    name: "Gyarados",
-    type: "water",
-    maxHp: 95,
-    attack: 80,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/gyarados.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/gyarados.gif"
-    },
-    moves: ["SURF", "BITE"],
-    drain: false
-  },
-
-  LAPRAS: {
-    pkdx: 131,
-    name: "Lapras",
-    type: "water",
-    maxHp: 130,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/lapras.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/lapras.gif"
-    },
-    moves: ["ICE_BEAM", "SURF"],
-    drain: false
-  },
-
-  DITTO: {
-    pkdx: 132,
-    name: "Ditto",
-    type: "normal",
-    maxHp: 48,
-    attack: 48,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/ditto.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/ditto.gif"
-    },
-    moves: ["TRANSFORM"],
-    drain: false
-  },
-
-  EEVEE: {
-    pkdx: 133,
-    name: "Eevee",
-    type: "normal",
-    maxHp: 55,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/eevee.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/eevee.gif"
-    },
-    moves: ["QUICK_ATTACK", "BITE"],
-    drain: false
-  },
-
-  VAPOREON: {
-    pkdx: 134,
-    name: "Vaporeon",
-    type: "water",
-    maxHp: 130,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/vaporeon.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/vaporeon.gif"
-    },
-    moves: ["SURF", "ICE_BEAM"],
-    drain: false
-  },
-
-  JOLTEON: {
-    pkdx: 135,
-    name: "Jolteon",
-    type: "electric",
-    maxHp: 65,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/jolteon.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/jolteon.gif"
-    },
-    moves: ["THUNDERBOLT", "QUICK_ATTACK"],
-    drain: false
-  },
-
-  FLAREON: {
-    pkdx: 136,
-    name: "Flareon",
-    type: "fire",
-    maxHp: 65,
-    attack: 80,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/flareon.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/flareon.gif"
-    },
-    moves: ["FLAMETHROWER", "BITE"],
-    drain: false
-  },
-
-  PORYGON: {
-    pkdx: 137,
-    name: "Porygon",
-    type: "normal",
-    maxHp: 65,
-    attack: 55,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/porygon.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/porygon.gif"
-    },
-    moves: ["TRI_ATTACK"],
-    drain: false
-  },
-
-  OMANYTE: {
-    pkdx: 138,
-    name: "Omanyte",
-    type: "rock",
-    maxHp: 35,
-    attack: 40,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/omanyte.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/omanyte.gif"
-    },
-    moves: ["WATER_GUN", "WITHDRAW"],
-    drain: false
-  },
-
-  OMASTAR: {
-    pkdx: 139,
-    name: "Omastar",
-    type: "rock",
-    maxHp: 70,
-    attack: 60,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/omastar.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/omastar.gif"
-    },
-    moves: ["SURF", "WITHDRAW"],
-    drain: false
-  },
-
-  KABUTO: {
-    pkdx: 140,
-    name: "Kabuto",
-    type: "rock",
-    maxHp: 30,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/kabuto.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/kabuto.gif"
-    },
-    moves: ["SCRATCH", "HARDEN"],
-    drain: false
-  },
-
-  KABUTOPS: {
-    pkdx: 141,
-    name: "Kabutops",
-    type: "rock",
-    maxHp: 60,
-    attack: 75,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/kabutops.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/kabutops.gif"
-    },
-    moves: ["SLASH", "SURF"],
-    drain: false
-  },
-
-  AERODACTYL: {
-    pkdx: 142,
-    name: "Aerodactyl",
-    type: "rock",
-    maxHp: 80,
-    attack: 75,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/aerodactyl.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/aerodactyl.gif"
-    },
-    moves: ["WING_ATTACK", "BITE"],
-    drain: false
-  },
-
-  SNORLAX: {
-    pkdx: 143,
-    name: "Snorlax",
-    type: "normal",
-    maxHp: 160,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/snorlax.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/snorlax.gif"
-    },
-    moves: ["BODY_SLAM", "REST"],
-    drain: false
-  },
-
-  ARTICUNO: {
-    pkdx: 144,
-    name: "Articuno",
-    type: "ice",
-    maxHp: 90,
-    attack: 65,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/articuno.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/articuno.gif"
-    },
-    moves: ["ICE_BEAM", "GUST"],
-    drain: false
-  },
-
-  ZAPDOS: {
-    pkdx: 145,
-    name: "Zapdos",
-    type: "electric",
-    maxHp: 90,
-    attack: 70,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/zapdos.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/zapdos.gif"
-    },
-    moves: ["THUNDERBOLT", "DRILL_PECK"],
-    drain: false
-  },
-
-  MOLTRES: {
-    pkdx: 146,
-    name: "Moltres",
-    type: "fire",
-    maxHp: 90,
-    attack: 70,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/moltres.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/moltres.gif"
-    },
-    moves: ["FLAMETHROWER", "WING_ATTACK"],
-    drain: false
-  }, */
-
-  DRATINI: {
-    pkdx: 147,
-    name: "Dratini",
-    type: "dragon",
-    maxHp: 41,
-    attack: 45,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/dratini.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/dratini.gif"
-    },
-    moves: ["DRAGON_RAGE", "WRAP"],
-    drain: false
-  },
-
-  DRAGONAIR: {
-    pkdx: 148,
-    name: "Dragonair",
-    type: "dragon",
-    maxHp: 61,
-    attack: 60,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/dragonair.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/dragonair.gif"
-    },
-    moves: ["DRAGON_RAGE", "SURF"],
-    drain: false
-  },
-
-  DRAGONITE: {
-    pkdx: 149,
-    name: "Dragonite",
-    type: "dragon",
-    maxHp: 91,
-    attack: 80,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/dragonite.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/dragonite.gif"
-    },
-    moves: ["OUTRAGE", "FLY"],
-    drain: false
-  },
-
-  MEWTWO: {
-    pkdx: 150,
-    name: "Mewtwo",
-    type: "psychic",
-    maxHp: 106,
-    attack: 90,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/mewtwo.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/mewtwo.gif"
-    },
-    moves: ["PSYCHIC", "RECOVER"],
-    drain: false
-  },
-
-  MEW: {
-    pkdx: 151,
-    name: "Mew",
-    type: "psychic",
-    maxHp: 100,
-    attack: 75,
-    sprites: {
-      front: "https://img.pokemondb.net/sprites/black-white/anim/normal/mew.gif",
-      back: "https://img.pokemondb.net/sprites/black-white/anim/back-normal/mew.gif"
-    },
-    moves: ["PSYCHIC", "TRANSFORM"],
-    drain: false
-  }
 
+CHARIZARD: {
+  serialnum: 1,
+  name: "Charizard",
+  type: ["fire","flying"],
+  maxHp: 90,
+  attack: 84,
+  defence: 60,
+  speed: 100,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/charizard.gif"
+  },
+  moves:["FLAMETHROWER","FLY","DRAGON_CLAW","SLASH"],
+  drain:false,
+  status:"normal"
+},
+
+BLASTOISE: {
+  serialnum: 2,
+  name: "Blastoise",
+  type: ["water"],
+  maxHp: 95,
+  attack: 83,
+  defence: 100,
+  speed: 78,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/blastoise.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/blastoise.gif"
+  },
+  moves:["SURF","ICE_BEAM","BITE","SKULL_BASH"],
+  drain:false,
+  status:"normal"
+},
+
+VENUSAUR: {
+  serialnum: 3,
+  name: "Venusaur",
+  type: ["grass","poison"],
+  maxHp: 95,
+  attack: 82,
+  defence: 83,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/venusaur.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/venusaur.gif"
+  },
+  moves:["GIGA_DRAIN","SLUDGE_BOMB","RAZOR_LEAF","LEECH_SEED"],
+  drain:false,
+  status:"normal"
+},
+
+PIKACHU: {
+  serialnum: 4,
+  name: "Pikachu",
+  type: ["electric"],
+  maxHp: 70,
+  attack: 55,
+  defence: 40,
+  speed: 110,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/pikachu.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/pikachu.gif"
+  },
+  moves:["THUNDERBOLT","QUICK_ATTACK","IRON_TAIL","VOLT_TACKLE"],
+  drain:false,
+  status:"normal"
+},
+
+GENGAR: {
+  serialnum: 5,
+  name: "Gengar",
+  type: ["ghost","poison"],
+  maxHp: 85,
+  attack: 65,
+  defence: 60,
+  speed: 110,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/gengar.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/gengar.gif"
+  },
+  moves:["SHADOW_BALL","SLUDGE_BOMB","DREAM_EATER","HYPNOSIS"],
+  drain:false,
+  status:"normal"
+},
+
+ALAKAZAM: {
+  serialnum: 6,
+  name: "Alakazam",
+  type: ["psychic"],
+  maxHp: 80,
+  attack: 50,
+  defence: 45,
+  speed: 120,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/alakazam.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/alakazam.gif"
+  },
+  moves:["PSYCHIC","CALM_MIND","RECOVER","SHADOW_BALL"],
+  drain:false,
+  status:"normal"
+},
+
+MACHAMP: {
+  serialnum: 7,
+  name: "Machamp",
+  type: ["fighting"],
+  maxHp: 95,
+  attack: 130,
+  defence: 80,
+  speed: 55,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/machamp.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/machamp.gif"
+  },
+  moves:["DYNAMIC_PUNCH","CROSS_CHOP","STONE_EDGE","BULK_UP"],
+  drain:false,
+  status:"normal"
+},
+
+GYARADOS: {
+  serialnum: 8,
+  name: "Gyarados",
+  type: ["water","flying"],
+  maxHp: 100,
+  attack: 125,
+  defence: 80,
+  speed: 81,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/gyarados.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/gyarados.gif"
+  },
+  moves:["WATERFALL","CRUNCH","DRAGON_DANCE","ICE_FANG"],
+  drain:false,
+  status:"normal"
+},
+
+SNORLAX: {
+  serialnum: 9,
+  name: "Snorlax",
+  type: ["normal"],
+  maxHp: 160,
+  attack: 110,
+  defence: 65,
+  speed: 30,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/snorlax.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/snorlax.gif"
+  },
+  moves:["BODY_SLAM","REST","CRUNCH","HEAVY_SLAM"],
+  drain:false,
+  status:"normal"
+},
+
+DRAGONITE: {
+  serialnum: 10,
+  name: "Dragonite",
+  type: ["dragon","flying"],
+  maxHp: 91,
+  attack: 134,
+  defence: 95,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/dragonite.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/dragonite.gif"
+  },
+  moves:["OUTRAGE","FLY","DRAGON_CLAW","EXTREME_SPEED"],
+  drain:false,
+  status:"normal"
+},
+
+ARCANINE: {
+  serialnum: 11,
+  name: "Arcanine",
+  type: ["fire"],
+  maxHp: 100,
+  attack: 110,
+  defence: 80,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/arcanine.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/arcanine.gif"
+  },
+  moves:["FLAMETHROWER","EXTREME_SPEED","CRUNCH","ICE_FANG"],
+  drain:false,
+  status:"normal"
+},
+
+LAPRAS: {
+  serialnum: 12,
+  name: "Lapras",
+  type: ["water","ice"],
+  maxHp: 130,
+  attack: 85,
+  defence: 80,
+  speed: 60,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/lapras.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/lapras.gif"
+  },
+  moves:["SURF","ICE_BEAM","BODY_SLAM","REST"],
+  drain:false,
+  status:"normal"
+},
+
+AERODACTYL: {
+  serialnum: 13,
+  name: "Aerodactyl",
+  type: ["rock","flying"],
+  maxHp: 80,
+  attack: 105,
+  defence: 65,
+  speed: 130,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/aerodactyl.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/aerodactyl.gif"
+  },
+  moves:["ROCK_SLIDE","AEROBLAST","CRUNCH","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+EEVEE: {
+  serialnum: 14,
+  name: "Eevee",
+  type: ["normal"],
+  maxHp: 70,
+  attack: 55,
+  defence: 50,
+  speed: 55,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/eevee.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/eevee.gif"
+  },
+  moves:["QUICK_ATTACK","BITE","REST","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+VAPOREON: {
+  serialnum: 15,
+  name: "Vaporeon",
+  type: ["water"],
+  maxHp: 130,
+  attack: 65,
+  defence: 60,
+  speed: 65,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/vaporeon.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/vaporeon.gif"
+  },
+  moves:["SURF","ICE_BEAM","AQUA_RING","REST"],
+  drain:false,
+  status:"normal"
+},
+
+JOLTEON: {
+  serialnum: 16,
+  name: "Jolteon",
+  type: ["electric"],
+  maxHp: 80,
+  attack: 65,
+  defence: 60,
+  speed: 130,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/jolteon.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/jolteon.gif"
+  },
+  moves:["THUNDERBOLT","THUNDER_WAVE","QUICK_ATTACK","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+FLAREON: {
+  serialnum: 17,
+  name: "Flareon",
+  type: ["fire"],
+  maxHp: 85,
+  attack: 130,
+  defence: 60,
+  speed: 65,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/flareon.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/flareon.gif"
+  },
+  moves:["FLAMETHROWER","FIRE_FANG","SUPERPOWER","REST"],
+  drain:false,
+  status:"normal"
+},
+
+ESPEON: {
+  serialnum: 18,
+  name: "Espeon",
+  type: ["psychic"],
+  maxHp: 85,
+  attack: 65,
+  defence: 60,
+  speed: 110,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/espeon.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/espeon.gif"
+  },
+  moves:["PSYCHIC","PSYSHOCK","CALM_MIND","MORNING_SUN"],
+  drain:false,
+  status:"normal"
+},
+
+UMBREON: {
+  serialnum: 19,
+  name: "Umbreon",
+  type: ["dark"],
+  maxHp: 110,
+  attack: 65,
+  defence: 110,
+  speed: 65,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/umbreon.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/umbreon.gif"
+  },
+  moves:["DARK_PULSE","TOXIC","MOONLIGHT","CONFUSE_RAY"],
+  drain:false,
+  status:"normal"
+},
+
+LEAFEON: {
+  serialnum: 20,
+  name: "Leafeon",
+  type: ["grass"],
+  maxHp: 85,
+  attack: 110,
+  defence: 130,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/leafeon.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/leafeon.gif"
+  },
+  moves:["LEAF_BLADE","SWORDS_DANCE","SYNTHESIS","X_SCISSOR"],
+  drain:false,
+  status:"normal"
+},
+
+GLACEON: {
+  serialnum: 21,
+  name: "Glaceon",
+  type: ["ice"],
+  maxHp: 85,
+  attack: 60,
+  defence: 110,
+  speed: 65,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/glaceon.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/glaceon.gif"
+  },
+  moves:["ICE_BEAM","ICE_SHARD","REST","BARRIER"],
+  drain:false,
+  status:"normal"
+},
+
+KINGDRA: {
+  serialnum: 22,
+  name: "Kingdra",
+  type: ["water","dragon"],
+  maxHp: 95,
+  attack: 95,
+  defence: 95,
+  speed: 85,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/kingdra.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/kingdra.gif"
+  },
+  moves:["SURF","DRAGON_PULSE","ICE_BEAM","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+MAGNEZONE: {
+  serialnum: 23,
+  name: "Magnezone",
+  type: ["electric","steel"],
+  maxHp: 90,
+  attack: 70,
+  defence: 115,
+  speed: 60,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/magnezone.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/magnezone.gif"
+  },
+  moves:["THUNDERBOLT","FLASH_CANNON","SIGNAL_BEAM","THUNDER_WAVE"],
+  drain:false,
+  status:"normal"
+},
+
+MAMOSWINE: {
+  serialnum: 24,
+  name: "Mamoswine",
+  type: ["ice","ground"],
+  maxHp: 110,
+  attack: 130,
+  defence: 80,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/mamoswine.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/mamoswine.gif"
+  },
+  moves:["EARTHQUAKE","ICE_FANG","STONE_EDGE","SUPERPOWER"],
+  drain:false,
+  status:"normal"
+},
+
+LUCARIO: {
+  serialnum: 25,
+  name: "Lucario",
+  type: ["fighting","steel"],
+  maxHp: 85,
+  attack: 110,
+  defence: 70,
+  speed: 90,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/lucario.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/lucario.gif"
+  },
+  moves:["AURA_SPHERE","CLOSE_COMBAT","METAL_CLAW","NASTY_PLOT"],
+  drain:false,
+  status:"normal"
+},
+
+SCYTHER: {
+  serialnum: 26,
+  name: "Scyther",
+  type: ["bug","flying"],
+  maxHp: 70,
+  attack: 110,
+  defence: 80,
+  speed: 105,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/scyther.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/scyther.gif"
+  },
+  moves:["X_SCISSOR","AIR_SLASH","SWORDS_DANCE","U_TURN"],
+  drain:false,
+  status:"normal"
+},
+
+JYNX: {
+  serialnum: 27,
+  name: "Jynx",
+  type: ["ice","psychic"],
+  maxHp: 65,
+  attack: 50,
+  defence: 35,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/jynx.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/jynx.gif"
+  },
+  moves:["ICE_BEAM","PSYCHIC","BARRIER","CALM_MIND"],
+  drain:false,
+  status:"normal"
+},
+
+ELECTIVIRE: {
+  serialnum: 28,
+  name: "Electivire",
+  type: ["electric"],
+  maxHp: 95,
+  attack: 123,
+  defence: 67,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/electivire.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/electivire.gif"
+  },
+  moves:["THUNDERBOLT","ICE_PUNCH","EARTHQUAKE","CROSS_CHOP"],
+  drain:false,
+  status:"normal"
+},
+
+MAGMORTAR: {
+  serialnum: 29,
+  name: "Magmortar",
+  type: ["fire"],
+  maxHp: 95,
+  attack: 95,
+  defence: 67,
+  speed: 83,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/magmortar.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/magmortar.gif"
+  },
+  moves:["FLAMETHROWER","FOCUS_BLAST","THUNDERBOLT","BULK_UP"],
+  drain:false,
+  status:"normal"
+},
+
+CROBAT: {
+  serialnum: 30,
+  name: "Crobat",
+  type: ["poison","flying"],
+  maxHp: 85,
+  attack: 90,
+  defence: 80,
+  speed: 130,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/crobat.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/crobat.gif"
+  },
+  moves:["SLUDGE_BOMB","AIR_SLASH","CONFUSE_RAY","ROOST"],
+  drain:false,
+  status:"normal"
+},
+
+STEELIX: {
+  serialnum: 31,
+  name: "Steelix",
+  type: ["steel","ground"],
+  maxHp: 75,
+  attack: 85,
+  defence: 200,
+  speed: 30,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/steelix.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/steelix.gif"
+  },
+  moves:["EARTHQUAKE","IRON_HEAD","ROCK_SLIDE","AUTOTOMIZE"],
+  drain:false,
+  status:"normal"
+},
+
+HOUNDOOM: {
+  serialnum: 32,
+  name: "Houndoom",
+  type: ["dark","fire"],
+  maxHp: 75,
+  attack: 90,
+  defence: 50,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/houndoom.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/houndoom.gif"
+  },
+  moves:["DARK_PULSE","FLAMETHROWER","NASTY_PLOT","SLUDGE_BOMB"],
+  drain:false,
+  status:"normal"
+},
+
+DONPHAN: {
+  serialnum: 33,
+  name: "Donphan",
+  type: ["ground"],
+  maxHp: 90,
+  attack: 120,
+  defence: 120,
+  speed: 50,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/donphan.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/donphan.gif"
+  },
+  moves:["EARTHQUAKE","STONE_EDGE","ICE_SHARD","BULK_UP"],
+  drain:false,
+  status:"normal"
+},
+
+SKARMORY: {
+  serialnum: 34,
+  name: "Skarmory",
+  type: ["steel","flying"],
+  maxHp: 85,
+  attack: 80,
+  defence: 140,
+  speed: 70,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/skarmory.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/skarmory.gif"
+  },
+  moves:["IRON_HEAD","AIR_SLASH","ROOST","TOXIC"],
+  drain:false,
+  status:"normal"
+},
+
+KINGLER: {
+  serialnum: 35,
+  name: "Kingler",
+  type: ["water"],
+  maxHp: 65,
+  attack: 130,
+  defence: 115,
+  speed: 75,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/kingler.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/kingler.gif"
+  },
+  moves:["HYDROPUMP","WATERFALL","SWORDS_DANCE","X_SCISSOR"],
+  drain:false,
+  status:"normal"
+},
+
+BRELOOM: {
+  serialnum: 36,
+  name: "Breloom",
+  type: ["grass","fighting"],
+  maxHp: 60,
+  attack: 130,
+  defence: 80,
+  speed: 70,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/breloom.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/breloom.gif"
+  },
+  moves:["SKY_UPPERCUT","LEAF_BLADE","LEECH_SEED","MACH_PUNCH"],
+  drain:false,
+  status:"normal"
+},
+
+SHARPEDO: {
+  serialnum: 37,
+  name: "Sharpedo",
+  type: ["water","dark"],
+  maxHp: 70,
+  attack: 120,
+  defence: 40,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/sharpedo.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/sharpedo.gif"
+  },
+  moves:["CRUNCH","SURF","ICE_BEAM","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+MANECTRIC: {
+  serialnum: 38,
+  name: "Manectric",
+  type: ["electric"],
+  maxHp: 70,
+  attack: 75,
+  defence: 60,
+  speed: 105,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/manectric.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/manectric.gif"
+  },
+  moves:["THUNDERBOLT","SIGNAL_BEAM","QUICK_ATTACK","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+AGGRON: {
+  serialnum: 39,
+  name: "Aggron",
+  type: ["steel","rock"],
+  maxHp: 70,
+  attack: 110,
+  defence: 180,
+  speed: 50,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/aggron.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/aggron.gif"
+  },
+  moves:["IRON_HEAD","STONE_EDGE","EARTHQUAKE","AUTOTOMIZE"],
+  drain:false,
+  status:"normal"
+},
+
+ABSOL: {
+  serialnum: 40,
+  name: "Absol",
+  type: ["dark"],
+  maxHp: 65,
+  attack: 130,
+  defence: 60,
+  speed: 75,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/absol.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/absol.gif"
+  },
+  moves:["NIGHT_SLASH","PSYSHOCK","SWORDS_DANCE","QUICK_ATTACK"],
+  drain:false,
+  status:"normal"
+},
+
+TORKOAL: {
+  serialnum: 41,
+  name: "Torkoal",
+  type: ["fire"],
+  maxHp: 70,
+  attack: 85,
+  defence: 140,
+  speed: 20,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/torkoal.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/torkoal.gif"
+  },
+  moves:["FLAMETHROWER","ERUPTION","BODY_SLAM","REST"],
+  drain:false,
+  status:"normal"
+},
+
+ALTARIA: {
+  serialnum: 42,
+  name: "Altaria",
+  type: ["dragon","flying"],
+  maxHp: 75,
+  attack: 70,
+  defence: 90,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/altaria.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/altaria.gif"
+  },
+  moves:["DRAGON_PULSE","AIR_SLASH","ROOST","COTTON_GUARD"],
+  drain:false,
+  status:"normal"
+},
+
+ROSERADE: {
+  serialnum: 43,
+  name: "Roserade",
+  type: ["grass","poison"],
+  maxHp: 60,
+  attack: 70,
+  defence: 65,
+  speed: 90,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/roserade.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/roserade.gif"
+  },
+  moves:["GIGA_DRAIN","SLUDGE_BOMB","TOXIC","SLEEP_POWDER"],
+  drain:false,
+  status:"normal"
+},
+
+HONCHKROW: {
+  serialnum: 44,
+  name: "Honchkrow",
+  type: ["dark","flying"],
+  maxHp: 100,
+  attack: 125,
+  defence: 52,
+  speed: 71,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/honchkrow.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/honchkrow.gif"
+  },
+  moves:["DARK_PULSE","AIR_SLASH","NASTY_PLOT","ROOST"],
+  drain:false,
+  status:"normal"
+},
+
+WEAVILE: {
+  serialnum: 45,
+  name: "Weavile",
+  type: ["dark","ice"],
+  maxHp: 70,
+  attack: 120,
+  defence: 65,
+  speed: 125,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/weavile.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/weavile.gif"
+  },
+  moves:["NIGHT_SLASH","ICICLE_CRASH","ICE_SHARD","SWORDS_DANCE"],
+  drain:false,
+  status:"normal"
+},
+
+RHYPERIOR: {
+  serialnum: 46,
+  name: "Rhyperior",
+  type: ["ground","rock"],
+  maxHp: 115,
+  attack: 140,
+  defence: 130,
+  speed: 40,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/rhyperior.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/rhyperior.gif"
+  },
+  moves:["EARTHQUAKE","STONE_EDGE","MEGAHORN","SUPERPOWER"],
+  drain:false,
+  status:"normal"
+},
+
+TOXICROAK: {
+  serialnum: 47,
+  name: "Toxicroak",
+  type: ["poison","fighting"],
+  maxHp: 83,
+  attack: 106,
+  defence: 65,
+  speed: 85,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/toxicroak.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/toxicroak.gif"
+  },
+  moves:["CROSS_CHOP","SLUDGE_BOMB","NASTY_PLOT","NIGHT_SLASH"],
+  drain:false,
+  status:"normal"
+},
+
+GLISCOR: {
+  serialnum: 48,
+  name: "Gliscor",
+  type: ["ground","flying"],
+  maxHp: 75,
+  attack: 95,
+  defence: 125,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/gliscor.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/gliscor.gif"
+  },
+  moves:["EARTHQUAKE","X_SCISSOR","ROOST","TOXIC"],
+  drain:false,
+  status:"normal"
+},
+
+FROSLASS: {
+  serialnum: 49,
+  name: "Froslass",
+  type: ["ice","ghost"],
+  maxHp: 70,
+  attack: 80,
+  defence: 70,
+  speed: 110,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/froslass.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/froslass.gif"
+  },
+  moves:["ICE_BEAM","SHADOW_BALL","CONFUSE_RAY","CALM_MIND"],
+  drain:false,
+  status:"normal"
+},
+
+GALLADE: {
+  serialnum: 50,
+  name: "Gallade",
+  type: ["psychic","fighting"],
+  maxHp: 68,
+  attack: 125,
+  defence: 65,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/gallade.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/gallade.gif"
+  },
+  moves:["PSYSTRIKE","CLOSE_COMBAT","SWORDS_DANCE","NIGHT_SLASH"],
+  drain:false,
+  status:"normal"
+},
+
+SWAMPERT: {
+  serialnum: 51,
+  name: "Swampert",
+  type: ["water","ground"],
+  maxHp: 105,
+  attack: 110,
+  defence: 90,
+  speed: 60,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/swampert.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/swampert.gif"
+  },
+  moves:["SURF","EARTHQUAKE","ICE_BEAM","SUPERPOWER"],
+  drain:false,
+  status:"normal"
+},
+
+SCEPTILE: {
+  serialnum: 52,
+  name: "Sceptile",
+  type: ["grass"],
+  maxHp: 85,
+  attack: 85,
+  defence: 65,
+  speed: 120,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/sceptile.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/sceptile.gif"
+  },
+  moves:["LEAF_BLADE","DRAGON_PULSE","X_SCISSOR","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+BLAZIKEN: {
+  serialnum: 53,
+  name: "Blaziken",
+  type: ["fire","fighting"],
+  maxHp: 88,
+  attack: 120,
+  defence: 70,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/blaziken.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/blaziken.gif"
+  },
+  moves:["FLARE_BLITZ","SKY_UPPERCUT","BLAZE_KICK","SWORDS_DANCE"],
+  drain:false,
+  status:"normal"
+},
+
+GARDEVOIR: {
+  serialnum: 54,
+  name: "Gardevoir",
+  type: ["psychic"],
+  maxHp: 90,
+  attack: 65,
+  defence: 65,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/gardevoir.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/gardevoir.gif"
+  },
+  moves:["PSYCHIC","MOONBLAST","CALM_MIND","WISH"],
+  drain:false,
+  status:"normal"
+},
+
+METAGROSS: {
+  serialnum: 55,
+  name: "Metagross",
+  type: ["steel","psychic"],
+  maxHp: 95,
+  attack: 135,
+  defence: 130,
+  speed: 70,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/metagross.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/metagross.gif"
+  },
+  moves:["METEOR_MASH","ZEN_HEADBUTT","EARTHQUAKE","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+SALAMENCE: {
+  serialnum: 56,
+  name: "Salamence",
+  type: ["dragon","flying"],
+  maxHp: 95,
+  attack: 135,
+  defence: 80,
+  speed: 100,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/salamence.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/salamence.gif"
+  },
+  moves:["OUTRAGE","FLY","FIRE_FANG","DRAGON_DANCE"],
+  drain:false,
+  status:"normal"
+},
+
+FLYGON: {
+  serialnum: 57,
+  name: "Flygon",
+  type: ["ground","dragon"],
+  maxHp: 90,
+  attack: 100,
+  defence: 80,
+  speed: 100,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/flygon.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/flygon.gif"
+  },
+  moves:["EARTHQUAKE","DRAGON_CLAW","U_TURN","ROOST"],
+  drain:false,
+  status:"normal"
+},
+
+MILOTIC: {
+  serialnum: 58,
+  name: "Milotic",
+  type: ["water"],
+  maxHp: 100,
+  attack: 70,
+  defence: 95,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/milotic.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/milotic.gif"
+  },
+  moves:["SURF","ICE_BEAM","RECOVER","TOXIC"],
+  drain:false,
+  status:"normal"
+},
+TOGEKISS: {
+  serialnum: 59,
+  name: "Togekiss",
+  type: ["fairy","flying"],
+  maxHp: 95,
+  attack: 50,
+  defence: 85,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/togekiss.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/togekiss.gif"
+  },
+  moves:["AIR_SLASH","AURA_SPHERE","ROOST","THUNDER_WAVE"],
+  drain:false,
+  status:"normal"
+},
+PORYGON_Z: {
+  serialnum: 60,
+  name: "Porygon-Z",
+  type: ["normal"],
+  maxHp: 85,
+  attack: 80,
+  defence: 70,
+  speed: 90,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/porygon-z.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/porygon-z.gif"
+  },
+  moves:["THUNDERBOLT","ICE_BEAM","SHADOW_BALL","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+STARAPTOR: {
+  serialnum: 61,
+  name: "Staraptor",
+  type: ["normal","flying"],
+  maxHp: 85,
+  attack: 120,
+  defence: 70,
+  speed: 100,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/staraptor.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/staraptor.gif"
+  },
+  moves:["BRAVE_BIRD","CLOSE_COMBAT","U_TURN","QUICK_ATTACK"],
+  drain:false,
+  status:"normal"
+},
+
+ROTOM: {
+  serialnum: 62,
+  name: "Rotom",
+  type: ["electric","ghost"],
+  maxHp: 75,
+  attack: 65,
+  defence: 80,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/rotom.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/rotom.gif"
+  },
+  moves:["THUNDERBOLT","SHADOW_BALL","CONFUSE_RAY","THUNDER_WAVE"],
+  drain:false,
+  status:"normal"
+},
+
+DUSKNOIR: {
+  serialnum: 63,
+  name: "Dusknoir",
+  type: ["ghost"],
+  maxHp: 90,
+  attack: 100,
+  defence: 135,
+  speed: 45,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/dusknoir.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/dusknoir.gif"
+  },
+  moves:["SHADOW_BALL","ICE_PUNCH","EARTHQUAKE","REST"],
+  drain:false,
+  status:"normal"
+},
+
+YANMEGA: {
+  serialnum: 64,
+  name: "Yanmega",
+  type: ["bug","flying"],
+  maxHp: 86,
+  attack: 76,
+  defence: 86,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/yanmega.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/yanmega.gif"
+  },
+  moves:["BUG_BUZZ","AIR_SLASH","SIGNAL_BEAM","U_TURN"],
+  drain:false,
+  status:"normal"
+},
+
+DRAPION: {
+  serialnum: 65,
+  name: "Drapion",
+  type: ["poison","dark"],
+  maxHp: 70,
+  attack: 90,
+  defence: 110,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/drapion.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/drapion.gif"
+  },
+  moves:["CRUNCH","SLUDGE_BOMB","EARTHQUAKE","TOXIC"],
+  drain:false,
+  status:"normal"
+},
+
+BRONZONG: {
+  serialnum: 66,
+  name: "Bronzong",
+  type: ["steel","psychic"],
+  maxHp: 67,
+  attack: 89,
+  defence: 116,
+  speed: 33,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/bronzong.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/bronzong.gif"
+  },
+  moves:["PSYCHIC","FLASH_CANNON","EARTHQUAKE","REFLECT"],
+  drain:false,
+  status:"normal"
+},
+
+SPIRITOMB: {
+  serialnum: 67,
+  name: "Spiritomb",
+  type: ["ghost","dark"],
+  maxHp: 108,
+  attack: 92,
+  defence: 108,
+  speed: 35,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/spiritomb.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/spiritomb.gif"
+  },
+  moves:["DARK_PULSE","SHADOW_BALL","CONFUSE_RAY","REST"],
+  drain:false,
+  status:"normal"
+},
+
+GASTRODON: {
+  serialnum: 68,
+  name: "Gastrodon",
+  type: ["water","ground"],
+  maxHp: 111,
+  attack: 83,
+  defence: 68,
+  speed: 39,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/gastrodon.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/gastrodon.gif"
+  },
+  moves:["SURF","EARTHQUAKE","ICE_BEAM","RECOVER"],
+  drain:false,
+  status:"normal"
+},
+
+DRIFBLIM: {
+  serialnum: 69,
+  name: "Drifblim",
+  type: ["ghost","flying"],
+  maxHp: 150,
+  attack: 80,
+  defence: 44,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/drifblim.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/drifblim.gif"
+  },
+  moves:["SHADOW_BALL","AIR_SLASH","CALM_MIND","REST"],
+  drain:false,
+  status:"normal"
+},
+
+LICKILICKY: {
+  serialnum: 70,
+  name: "Lickilicky",
+  type: ["normal"],
+  maxHp: 110,
+  attack: 85,
+  defence: 95,
+  speed: 50,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/lickilicky.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/lickilicky.gif"
+  },
+  moves:["BODY_SLAM","EARTHQUAKE","POWER_WHIP","REST"],
+  drain:false,
+  status:"normal"
+},
+
+TANGROWTH: {
+  serialnum: 71,
+  name: "Tangrowth",
+  type: ["grass"],
+  maxHp: 100,
+  attack: 100,
+  defence: 125,
+  speed: 50,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/tangrowth.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/tangrowth.gif"
+  },
+  moves:["GIGA_DRAIN","LEAF_STORM","EARTHQUAKE","STUN_SPORE"],
+  drain:false,
+  status:"normal"
+},
+
+ELECTRODE: {
+  serialnum: 72,
+  name: "Electrode",
+  type: ["electric"],
+  maxHp: 60,
+  attack: 50,
+  defence: 70,
+  speed: 150,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/electrode.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/electrode.gif"
+  },
+  moves:["THUNDERBOLT","THUNDER_WAVE","EXTREME_SPEED","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+CRADILY: {
+  serialnum: 73,
+  name: "Cradily",
+  type: ["rock","grass"],
+  maxHp: 86,
+  attack: 81,
+  defence: 97,
+  speed: 43,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/cradily.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/cradily.gif"
+  },
+  moves:["GIGA_DRAIN","STONE_EDGE","EARTHQUAKE","RECOVER"],
+  drain:false,
+  status:"normal"
+},
+
+CARRACOSTA: {
+  serialnum: 74,
+  name: "Carracosta",
+  type: ["water","rock"],
+  maxHp: 74,
+  attack: 108,
+  defence: 133,
+  speed: 32,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/carracosta.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/carracosta.gif"
+  },
+  moves:["WATERFALL","STONE_EDGE","AQUA_JET","IRON_DEFENSE"],
+  drain:false,
+  status:"normal"
+},
+
+REUNICLUS: {
+  serialnum: 75,
+  name: "Reuniclus",
+  type: ["psychic"],
+  maxHp: 110,
+  attack: 65,
+  defence: 75,
+  speed: 30,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/reuniclus.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/reuniclus.gif"
+  },
+  moves:["PSYCHIC","PSYSHOCK","CALM_MIND","RECOVER"],
+  drain:false,
+  status:"normal"
+},
+
+HAXORUS: {
+  serialnum: 76,
+  name: "Haxorus",
+  type: ["dragon"],
+  maxHp: 76,
+  attack: 147,
+  defence: 90,
+  speed: 97,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/haxorus.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/haxorus.gif"
+  },
+  moves:["OUTRAGE","DRAGON_CLAW","EARTHQUAKE","SWORDS_DANCE"],
+  drain:false,
+  status:"normal"
+},
+
+CHANDELURE: {
+  serialnum: 77,
+  name: "Chandelure",
+  type: ["ghost","fire"],
+  maxHp: 60,
+  attack: 55,
+  defence: 90,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/chandelure.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/chandelure.gif"
+  },
+  moves:["SHADOW_BALL","FLAMETHROWER","CALM_MIND","ENERGY_BALL"],
+  drain:false,
+  status:"normal"
+},
+
+COFAGRIGUS: {
+  serialnum: 78,
+  name: "Cofagrigus",
+  type: ["ghost"],
+  maxHp: 58,
+  attack: 50,
+  defence: 145,
+  speed: 30,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/cofagrigus.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/cofagrigus.gif"
+  },
+  moves:["SHADOW_BALL","TOXIC","REST","CALM_MIND"],
+  drain:false,
+  status:"normal"
+},
+
+KROOKODILE: {
+  serialnum: 79,
+  name: "Krookodile",
+  type: ["ground","dark"],
+  maxHp: 95,
+  attack: 117,
+  defence: 80,
+  speed: 92,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/krookodile.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/krookodile.gif"
+  },
+  moves:["EARTHQUAKE","CRUNCH","STONE_EDGE","BULK_UP"],
+  drain:false,
+  status:"normal"
+},
+
+JELLICENT: {
+  serialnum: 80,
+  name: "Jellicent",
+  type: ["water","ghost"],
+  maxHp: 100,
+  attack: 60,
+  defence: 70,
+  speed: 60,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/jellicent.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/jellicent.gif"
+  },
+  moves:["SURF","SHADOW_BALL","RECOVER","TOXIC"],
+  drain:false,
+  status:"normal"
+},
+
+MIENSHAO: {
+  serialnum: 81,
+  name: "Mienshao",
+  type: ["fighting"],
+  maxHp: 65,
+  attack: 125,
+  defence: 60,
+  speed: 105,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/mienshao.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/mienshao.gif"
+  },
+  moves:["CLOSE_COMBAT","U_TURN","STONE_EDGE","BULK_UP"],
+  drain:false,
+  status:"normal"
+},
+
+GALVANTULA: {
+  serialnum: 82,
+  name: "Galvantula",
+  type: ["bug","electric"],
+  maxHp: 70,
+  attack: 77,
+  defence: 60,
+  speed: 108,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/galvantula.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/galvantula.gif"
+  },
+  moves:["THUNDERBOLT","BUG_BUZZ","SIGNAL_BEAM","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+FERROTHORN: {
+  serialnum: 83,
+  name: "Ferrothorn",
+  type: ["grass","steel"],
+  maxHp: 74,
+  attack: 94,
+  defence: 131,
+  speed: 20,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/ferrothorn.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/ferrothorn.gif"
+  },
+  moves:["POWER_WHIP","IRON_HEAD","TOXIC","REST"],
+  drain:false,
+  status:"normal"
+},
+
+BISHARP: {
+  serialnum: 84,
+  name: "Bisharp",
+  type: ["dark","steel"],
+  maxHp: 65,
+  attack: 125,
+  defence: 100,
+  speed: 70,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/bisharp.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/bisharp.gif"
+  },
+  moves:["IRON_HEAD","NIGHT_SLASH","SWORDS_DANCE","STONE_EDGE"],
+  drain:false,
+  status:"normal"
+},
+
+BRAVIARY: {
+  serialnum: 85,
+  name: "Braviary",
+  type: ["normal","flying"],
+  maxHp: 100,
+  attack: 123,
+  defence: 75,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/braviary.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/braviary.gif"
+  },
+  moves:["BRAVE_BIRD","SUPERPOWER","ROOST","U_TURN"],
+  drain:false,
+  status:"normal"
+},
+
+MANDIBUZZ: {
+  serialnum: 86,
+  name: "Mandibuzz",
+  type: ["dark","flying"],
+  maxHp: 110,
+  attack: 65,
+  defence: 105,
+  speed: 80,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/mandibuzz.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/mandibuzz.gif"
+  },
+  moves:["DARK_PULSE","AIR_SLASH","ROOST","TOXIC"],
+  drain:false,
+  status:"normal"
+},
+
+ACCELGOR: {
+  serialnum: 87,
+  name: "Accelgor",
+  type: ["bug"],
+  maxHp: 80,
+  attack: 70,
+  defence: 40,
+  speed: 145,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/accelgor.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/accelgor.gif"
+  },
+  moves:["BUG_BUZZ","GIGA_DRAIN","U_TURN","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+
+ESCAVALIER: {
+  serialnum: 88,
+  name: "Escavalier",
+  type: ["bug","steel"],
+  maxHp: 70,
+  attack: 135,
+  defence: 105,
+  speed: 20,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/escavalier.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/escavalier.gif"
+  },
+  moves:["MEGAHORN","IRON_HEAD","CLOSE_COMBAT","SWORDS_DANCE"],
+  drain:false,
+  status:"normal"
+},
+
+SIGILYPH: {
+  serialnum: 89,
+  name: "Sigilyph",
+  type: ["psychic","flying"],
+  maxHp: 72,
+  attack: 58,
+  defence: 80,
+  speed: 97,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/sigilyph.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/sigilyph.gif"
+  },
+  moves:["PSYCHIC","AIR_SLASH","CALM_MIND","ROOST"],
+  drain:false,
+  status:"normal"
+},
+
+EELEKTROSS: {
+  serialnum: 90,
+  name: "Eelektross",
+  type: ["electric"],
+  maxHp: 85,
+  attack: 115,
+  defence: 80,
+  speed: 50,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/eelektross.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/eelektross.gif"
+  },
+  moves:["THUNDERBOLT","CRUNCH","GIGA_DRAIN","COIL"],
+  drain:false,
+  status:"normal"
+},
+
+ZOROARK: {
+  serialnum: 91,
+  name: "Zoroark",
+  type: ["dark"],
+  maxHp: 80,
+  attack: 105,
+  defence: 60,
+  speed: 105,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/zoroark.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/zoroark.gif"
+  },
+  moves:["NIGHT_DAZE","DARK_PULSE","NASTY_PLOT","FLAMETHROWER"],
+  drain:false,
+  status:"normal"
+},
+
+VOLCARONA: {
+  serialnum: 92,
+  name: "Volcarona",
+  type: ["bug","fire"],
+  maxHp: 85,
+  attack: 60,
+  defence: 65,
+  speed: 100,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/volcarona.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/volcarona.gif"
+  },
+  moves:["FIERY_DANCE","BUG_BUZZ","QUIVER_DANCE","GIGA_DRAIN"],
+  drain:false,
+  status:"normal"
+},
+
+// ===== LEGENDARIES =====
+
+LUGIA: {
+  serialnum: 93,
+  name: "Lugia",
+  type: ["psychic","flying"],
+  maxHp: 106,
+  attack: 90,
+  defence: 130,
+  speed: 110,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/lugia.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/lugia.gif"
+  },
+  moves:["AEROBLAST","PSYCHIC","CALM_MIND","RECOVER"],
+  drain:false,
+  status:"normal"
+},
+
+MEWTWO: {
+  serialnum: 94,
+  name: "Mewtwo",
+  type: ["psychic"],
+  maxHp: 106,
+  attack: 110,
+  defence: 90,
+  speed: 130,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/mewtwo.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/mewtwo.gif"
+  },
+  moves:["PSYSTRIKE","PSYCHIC","CALM_MIND","RECOVER"],
+  drain:false,
+  status:"normal"
+},
+
+GROUDON: {
+  serialnum: 95,
+  name: "Groudon",
+  type: ["ground"],
+  maxHp: 100,
+  attack: 150,
+  defence: 140,
+  speed: 90,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/groudon.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/groudon.gif"
+  },
+  moves:["EARTHQUAKE","STONE_EDGE","SUPERPOWER","BULK_UP"],
+  drain:false,
+  status:"normal"
+},
+
+KYOGRE: {
+  serialnum: 96,
+  name: "Kyogre",
+  type: ["water"],
+  maxHp: 100,
+  attack: 100,
+  defence: 90,
+  speed: 90,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/kyogre.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/kyogre.gif"
+  },
+  moves:["SURF","ICE_BEAM","THUNDERBOLT","CALM_MIND"],
+  drain:false,
+  status:"normal"
+},
+
+RAYQUAZA: {
+  serialnum: 97,
+  name: "Rayquaza",
+  type: ["dragon","flying"],
+  maxHp: 105,
+  attack: 150,
+  defence: 90,
+  speed: 115,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/rayquaza.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/rayquaza.gif"
+  },
+  moves:["DRAGON_ASCENT","OUTRAGE","EXTREME_SPEED","DRAGON_DANCE"],
+  drain:false,
+  status:"normal"
+},
+
+DIALGA: {
+  serialnum: 98,
+  name: "Dialga",
+  type: ["steel","dragon"],
+  maxHp: 120,
+  attack: 120,
+  defence: 120,
+  speed: 90,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/dialga.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/dialga.gif"
+  },
+  moves:["ROAR_OF_TIME","FLASH_CANNON","DRAGON_PULSE","CALM_MIND"],
+  drain:false,
+  status:"normal"
+},
+
+PALKIA: {
+  serialnum: 99,
+  name: "Palkia",
+  type: ["water","dragon"],
+  maxHp: 120,
+  attack: 120,
+  defence: 100,
+  speed: 100,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/palkia.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/palkia.gif"
+  },
+  moves:["SPACIAL_REND","SURF","DRAGON_PULSE","AQUA_RING"],
+  drain:false,
+  status:"normal"
+},
+
+GIRATINA: {
+  serialnum: 100,
+  name: "Giratina",
+  type: ["ghost","dragon"],
+  maxHp: 150,
+  attack: 120,
+  defence: 120,
+  speed: 90,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/giratina.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/giratina.gif"
+  },
+  moves:["SHADOW_FORCE","DRAGON_CLAW","REST","CALM_MIND"],
+  drain:false,
+  status:"normal"
+},
+RESHIRAM: {
+  name: "Reshiram",
+  type: ["dragon","fire"],
+  maxHp: 125,
+  attack: 130,
+  defence: 100,
+  speed: 90,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/reshiram.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/reshiram.gif"
+  },
+  moves:["BLUE_FLARE","DRAGON_PULSE","EARTHQUAKE","ROOST"],
+  drain:false,
+  status:"normal"
+},
+ZEKROM: {
+  name: "Zekrom",
+  type: ["dragon","electric"],
+  maxHp: 125,
+  attack: 150,
+  defence: 100,
+  speed: 90,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/zekrom.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/zekrom.gif"
+  },
+  moves:["BOLT_STRIKE","DRAGON_CLAW","CRUNCH","DRAGON_DANCE"],
+  drain:false,
+  status:"normal"
+},
+KYUREM: {
+  name: "Kyurem",
+  type: ["dragon","ice"],
+  maxHp: 125,
+  attack: 130,
+  defence: 90,
+  speed: 95,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/kyurem.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/kyurem.gif"
+  },
+  moves:["ICE_BEAM","DRAGON_PULSE","GLACIATE","ROOST"],
+  drain:false,
+  status:"normal"
+},
+THUNDURUS: {
+  name: "Thundurus",
+  type: ["electric","flying"],
+  maxHp: 79,
+  attack: 115,
+  defence: 70,
+  speed: 111,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/thundurus.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/thundurus.gif"
+  },
+  moves:["THUNDERBOLT","AIR_SLASH","NASTY_PLOT","AGILITY"],
+  drain:false,
+  status:"normal"
+},
+TORNADUS: {
+  name: "Tornadus",
+  type: ["flying"],
+  maxHp: 79,
+  attack: 115,
+  defence: 70,
+  speed: 111,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/tornadus.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/tornadus.gif"
+  },
+  moves:["AIR_SLASH","U_TURN","ROCK_SLIDE","DARK_PULSE"],
+  drain:false,
+  status:"normal"
+},
+
+LANDORUS: {
+  name: "Landorus",
+  type: ["ground","flying"],
+  maxHp: 89,
+  attack: 125,
+  defence: 90,
+  speed: 101,
+  sprites:{
+    front:"https://img.pokemondb.net/sprites/black-white/anim/normal/landorus.gif",
+    back:"https://img.pokemondb.net/sprites/black-white/anim/back-normal/landorus.gif"
+  },
+  moves:["EARTHQUAKE","STONE_EDGE","U_TURN","SUPERPOWER"],
+  drain:false,
+  status:"normal"
+}
 
 
 

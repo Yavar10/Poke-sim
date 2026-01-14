@@ -1,11 +1,15 @@
 import { pp } from "./pp";
-import { atkdn } from "./attackDown";
-import { atkup } from "./attackUp";
+import { atkdn,atkup,defdn,defup } from "./statschange";
 import { calculateDamage } from "./damage";
 import { hitSound } from "../audio/sounds";
 import { faint } from "./faint";
 import { enemymove } from "./enemyMoveSelector";
 import { applyDrain } from "./drain";
+import { isItHappening } from "./random";
+import { poison, toxic } from "./toxic";
+import { heal } from "./heal";
+import { burn, burnt } from "./burn";
+import { paraz } from "./para";
 
 export function attack(
   attacker,
@@ -23,17 +27,39 @@ export function attack(
   if (!move) return;
 
   setLocked(true)
-  // PP--
-  pp(setAttacker, move);
+
+if(attacker.status==="paralyzed"&&isItHappening(40))
+{
+  setTimeout(() => {
+      setLog(`${attacker.name} could not move due to paralysis`);
+    }, 600);
+}
+  else// PP--
+  {pp(setAttacker, move);
 
   // STATS BUFF
-  if (move && (move.effect === "ATTACK_DOWN" || move.effect === "DEFENSE_UP")) {
-    atkdn(setDefender, attacker, defender, setLog, move.effect);
-  } else if (
-    move &&
-    (move.effect === "ATTACK_UP" || move.effect === "DEFENSE_DOWN")
-  ) {
-    atkup(setAttacker, attacker, defender, setLog, move.effect);
+  const effectos=move.effect.split("_");
+  if (effectos[0] === "ATTACKDOWN" ){
+    atkdn(attacker,defender,setAttacker,setDefender,setLog,effectos[1]);
+  }
+  else if( effectos[0] === "ATTACKUP") {
+    atkup(attacker,defender,setAttacker,setDefender,setLog,effectos[1]);
+  } else  if (effectos[0] === "DEFENCEDOWN"){
+    defdn(attacker,defender,setAttacker,setDefender,setLog,effectos[1]);
+  } else if( effectos[0] === "DEFENCEUP") {
+    defup(attacker,defender,setAttacker,setDefender,setLog,effectos[1]);
+  }
+  else if(effectos[0]==="HEAL"){
+    heal(setAttacker,attacker,setLog)
+  }
+  else if (effectos[0]==="TOXIC" && isItHappening(effectos[1])&&defender.status==="normal") {
+      toxic(setDefender,defender,setLog)
+  }
+  else if (effectos[0]==="BURN" && isItHappening(effectos[1])&&defender.status==="normal") {
+      burn(setDefender,defender,setLog)
+  }
+  else if (effectos[0]==="PARALYZE" && isItHappening(effectos[1])&&defender.status==="normal") {
+      paraz(setDefender,defender,setLog)
   }
 
   // DAMAGE
@@ -64,12 +90,12 @@ export function attack(
   // HIT RESET
   setTimeout(() => setDefHit(false), 300);
 
-  // FAINT CHECK
   if (newHp === 0) {
     console.log("FAINT IN ATTACK")
     faint(setLog, defender, setGameOver);
     return;
   }
+}  // FAINT CHECK
 
   // 🔴 ENEMY TURN (DELAYED — THIS IS THE IMPORTANT PART)
   if (isPlayer === true) {
@@ -98,6 +124,14 @@ export function attack(
       applyDrain(defender, attacker, setDefender, setAttacker, setLog);
     if (defender.drain)
       applyDrain(attacker, defender, setAttacker, setDefender, setLog);
+    if(attacker.status==="poisoned")
+      poison(setAttacker,attacker,setLog)
+    if(defender.status==="poisoned")
+      poison(setDefender,defender,setLog)
+    if(attacker.status==="burnt")
+      burnt(setAttacker,attacker,setLog)
+    if(defender.status==="burnt")
+      burnt(setDefender,defender,setLog)
     setTimeout(()=>{
       setLocked(false)
     },1000)
