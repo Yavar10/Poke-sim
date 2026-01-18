@@ -90,7 +90,7 @@ export default function FireRedBattle() {
                   (player.moves[0].pp+
                   player.moves[1].pp+
                   player.moves[2].pp+
-                  player.moves[4].pp)>0?
+                  player.moves[3].pp)>0?
                 <div style={{
     ...styles.moves,
     padding: 8,
